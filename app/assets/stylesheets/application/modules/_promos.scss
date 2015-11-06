@@ -1,0 +1,78 @@
+.promos-list{
+}
+.promos-list__item{
+  border: 1px solid #F2CCA6;
+  padding: 10px;
+  margin-bottom: 20px;
+  min-height: 220px;
+  .media-heading{
+    font-weight: 600;
+    font-size: 14px;
+    color: #EF8102;
+    line-height: 15px;
+    a{
+      font-weight: 600;
+      font-size: 14px;
+      color: #EF8102;
+      line-height: 15px;
+    }
+  }
+  .description{
+    font-weight: 600;
+    font-size: 13px;
+    color: #1B1E24;
+    line-height: 15px;
+    min-height: 35px;
+  }
+  .place-promo{
+    address, a{
+      font-weight: 600;
+      font-size: 13px;
+      color: #1B1E24;
+      line-height: 19px;
+    }
+  }
+}
+.media-object{
+  max-width: 100%;
+}
+.app-top-container{
+  .m-adaptiv-form{
+    max-width: 510px;
+    margin: 0;
+    display: inline-block;
+  }
+  .input-group.m-round {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+  .form input.m-dark{
+    background-color: #fff;
+  }
+  .coupon-intro_form {
+    margin-bottom: 0;
+    width: auto;
+    padding: 0 15px;
+    float: left;
+  }
+  .internal-links{
+    float: right;
+    padding: 10px;
+    a{
+      margin-right: 10px;
+    }
+  }
+  .container{
+    width: auto;
+  }
+}
+.btn:hover, .btn:focus {
+  text-decoration: none;
+}
+
+.share-list{
+  list-style: none;
+  padding-left: 0;
+  .share-list__item{
+    float: left;
+  }
+}

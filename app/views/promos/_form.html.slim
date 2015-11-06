@@ -1,0 +1,44 @@
+= simple_form_for([place, promo]) do |f|
+  = f.error_notification
+  .row
+    .col-md-12
+      = f.input :name, label: t('activerecord.attributes.promo.name')
+    .col-md-12
+      = f.input :description, as: :text, input_html: { class: "wysihtml5", rows: 5 }, label: t('activerecord.attributes.promo.description')
+    .col-md-6
+      = f.label t('activerecord.attributes.promo.banner'), required: true
+      .thumbnail
+        .avatar
+          span.thumbnail
+            = image_tag promo.banner(:medium)
+    .col-md-12
+      .has-error
+        = f.error :banner
+      = f.file_field :banner, label: false, required: true, class: "js-dropzone"
+    .col-md-6
+      = f.input :start_at, label: t('activerecord.attributes.promo.start_at'), as: :date_picker, required: true
+    .col-md-6
+      = f.input :end_at, label: t('activerecord.attributes.promo.end_at'), as: :date_picker, required: true
+    .col-md-12
+      = f.input :published, as: :boolean, label: t('activerecord.attributes.promo.published')
+    .col-md-12
+      = f.input :role_id, as: :select, label: t('activerecord.attributes.promo.role'), collection: @roles, hint: t('views.promos.role_info')
+    .col-md-12
+      = f.input :star_number, label: t('activerecord.attributes.promo.star_number'), required: true
+    .col-md-12
+      = f.input :extra_description, as: :text, input_html: { class: "wysihtml5", rows: 5 }, label: t('activerecord.attributes.promo.terms')
+    .col-md-12
+      = f.input :category_id, as: :select, label: t('activerecord.attributes.promo.categories'), collection: @root_categories, label_method: :"name_#{params[:locale]}", value_method: :id, include_blank: true, required: true
+    .col-md-12
+      = f.input :subcategory1_id, as: :select, label: t('activerecord.attributes.promo.subcategories'), collection: @sub_categories, label_method: :"name_#{params[:locale]}", value_method: :id, include_blank: true, required: true
+    .col-md-12
+      = f.input :subcategory2_id, as: :select, collection: @sub_categories_two, label_method: :"name_#{params[:locale]}", value_method: :id, include_blank: true, label: false
+
+    = hidden_field_tag "subcategories_url", subcategories_categories_path
+  .form-actions
+    .clearfix.m-b-20
+      .pull-right
+        = f.button :submit, "#{button_title}", class: "btn btn-primary btn-cons"
+        = link_to t('titles.cancel'), place_promos_path(place), class: "btn btn-white btn-cons"
+- content_for :javascript do
+  = javascript_include_tag "promos/form"

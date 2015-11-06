@@ -1,0 +1,31 @@
+.page-header
+  h1.normaltext-center
+    span.p-r-10 =t('titles.plans')
+.p-t-10
+  .row.m-t-20.m-b-40
+    - @plans.each do |plan|
+      .col-md-3.m-b-30
+        .pricing-holder
+          .inner
+            .title.text-center
+              span.text-success.m-r-5
+                | Rewardners
+              - if plan.price > 0
+                = plan.name_I18n(params[:locale])
+                .price.text-success
+                  = number_to_currency(plan.price, unit: "$", delimiter: ".")
+              - else
+                .price.text-success
+                  = t('titles.free')
+            p.desc
+              = plan.description_I18n(params[:locale]).truncate(200, separator: /\s/)
+            - if current_user.plan_active(plan.id)
+              span class="label label-primary"
+                = t('titles.plan_active')
+              / - if current_user.current_subscription.present? && current_user.current_subscription.paid?
+                / = link_to t('views.subscriptions.cancel_button'), subscription_path(current_user.current_subscription), method: :delete, data: { confirm: t('views.subscriptions.cancel') }, class: "btn btn-primary"
+            - elsif current_user.has_a_free_subscription_active?
+              = link_to t('views.subscriptions.subscribe_button'), subscriptions_path(plan_id: plan.id), method: :post, class: "button btn btn-block btn-primary"
+    .clearfix
+
+= render 'subscriptions/history'

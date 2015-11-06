@@ -1,0 +1,37 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left
+          span.m-r-5
+            = t('titles.rewards')
+          small= t('titles.redeem_coupons')
+      .grid-body
+        .row
+          .col-md-12
+            - if @places
+              table.table.table-striped.js-data-table
+                thead
+                  tr
+                    th= t('titles.place')
+                    th= t('titles.email')
+                    th= t('titles.user')
+                    th= t('titles.places_stars')
+                    th= t('titles.actions')
+                tbody
+                  - @places.each do |place|
+                    tr
+                      td= place["name"]
+                      td= place["user_email"]
+                      td= place_full_name_or_company(place)
+                      td= place["total_stars"]
+                      td= link_to t('titles.redeem'), for_user_in_place_redeems_path(place["place_id"], place["user_id"]), class: "btn btn-success"
+            - else
+              table.table.table-striped
+                tbody
+                  tr
+                    td colspan="4"
+                      = t('views.places.empty_list')
+
+            .text-center
+              = will_paginate @places

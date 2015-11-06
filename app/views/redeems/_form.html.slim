@@ -1,0 +1,16 @@
+= simple_form_for(redeem) do |f|
+  = f.error_notification
+  .row
+    .col-md-12
+      p= label_tag "current stars: #{redeem.total_stars}"
+    .col-md-12
+      = f.input :number_of_stars, prompt: "Select stars to redeem"
+    .col-md-12
+      = f.input :description
+    = f.hidden_field :user_id
+    = f.hidden_field :place_id
+  .form-actions
+    .clearfix.m-b-20
+      .pull-right
+        = f.button :submit, t('titles.redeem'), class:"btn btn-primary btn-cons"
+        = link_to t('titles.back'), delivery_redeems_path, class: "btn btn-white btn-cons"

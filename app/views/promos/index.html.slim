@@ -1,0 +1,40 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left
+          span.m-r-5
+            = @place.name
+          small= t('titles.coupons')
+        .pull-right.p-t-5
+          - if current_user.can_create_promos?
+            = link_to t('titles.new_coupon'), new_place_promo_path, class: "btn btn-primary btn-cons"
+          = link_to t('titles.back'), places_path, class: "btn btn-info btn-cons"
+      .grid-body
+        .row
+          .col-md-12
+            table.table.table-striped
+              - if @promos.count > 0
+                thead
+                  tr
+                    th= t('titles.name')
+                    th= t('titles.published')
+                    th= t('titles.published_at')
+                    th= t('titles.role')
+                    th.text-center colspan= "3" = t('titles.actions')
+                tbody
+                  - @promos.each do |promo|
+                    tr
+                      td= promo.name
+                      td= promo.published?
+                      td= promo.published_at_formatted
+                      td
+                        span.label.label-primary= promo.role_name_formatted
+                      td= link_to t('titles.show'), place_promo_path(promo.place_id, promo)
+                      td= link_to t('titles.edit'), edit_place_promo_path(promo.place_id, promo)
+                      td= link_to t('titles.destroy'), place_promo_path(promo.place_id, promo), method: :delete, data: { confirm: t('actions.delete') }
+              - else
+                tboby
+                  tr= t('views.promos.empty_list')
+            .text-center
+              = will_paginate @promos

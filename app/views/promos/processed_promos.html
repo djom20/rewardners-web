@@ -1,0 +1,40 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left
+          =t('titles.my_coupons')
+      .grid-body
+        .row
+          .col-md-12
+            - if @promos.count > 0
+              table.table.table-striped
+                thead
+                  tr
+                    th= t('titles.name')
+                    th= t('titles.code')
+                    th= t('titles.taken_at')
+                    th= t('titles.approved_rejected')
+                    th colspan= "2"
+                tbody
+                  - @taken_promos.each do |taken_promo|
+                    tr
+                      td= taken_promo.promo_name
+                      td= taken_promo.promo_code
+                      td= taken_promo.created_at
+                      - if taken_promo.approved?
+                        td
+                          = taken_promo.created_at
+                      - elsif taken_promo.rejected?
+                        td
+                          = taken_promo.created_at
+                      - else
+                        td
+                          span.label.label-default N/A
+                      td colspan="2" id="taken_promo_#{taken_promo.id}"
+                        span class= "label label-#{taken_promo_order_label(taken_promo.order_status?)}"
+                          = t("views.taken_promo.status.#{taken_promo.order_status?}")
+            - else
+              table.table.table-striped
+                tboby
+                  tr= t('mes.no_coupons')

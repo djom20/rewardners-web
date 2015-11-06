@@ -1,0 +1,227 @@
+- if params[:locale] == "es"
+  .pricing-main-container
+    h3
+      span.text-orange.m-r-5
+        | REWARDNERS
+      |PROGRAMS
+    ul.breadcrumb.text-orange
+      li
+        | Step 1: Select Program
+      li
+        | Step 2: Review & Checkout
+      li
+        | Step 3: Payment
+      li
+        | Step 4: Program Confirmation
+    .grid.simple
+      .grid-body.p-sides-10.p-ends-10.no-border
+        .table-responsive
+          table.table.pricing-table
+            thead
+              tr
+                th.bg-white
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Gratis
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Unlimited
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Program
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Mobile management
+            tbody
+              tr
+                th.bg-white
+                td.text-center.bg-light-blue.bold
+                  | $00.00
+                td.text-center.bg-light-blue.bold
+                  | $49.99
+                td.text-center.bg-light-blue.bold
+                  | $59.99
+                td.text-center.bg-light-blue.bold
+                  | $69.99
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="Puede utilizar Rewardners cargando una promoción por mes completamente Gratis y llegar a todos sus clientes que están utilizando la aplicación móvil de Rewardners." data-toggle="popover" data-trigger="focus" Conéctate
+                  | Con tus clientes
+                  br
+                  | Con una promoción por mes.
+                td.text-center.bg-light-yellow = image_tag('logo-symbol.svg')
+                td.text-center.bg-light-grey
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey
+              tr.bg-white
+                th.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="Ahora usted puede cargar un número ilimitado de promociones que usted necesita publicar. Puede tener varias promociones publicadas simultáneamente y también puedes publicar las promociones por el momento, de temporada o por ocasión. No hay limites." data-toggle="popover" data-trigger="focus" Atraiga
+                  | Clientes con promociones
+                  br
+                  |Ilimitadas por mes.
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+                td.text-center.bg-light-yellow= image_tag('logo-symbol.svg')
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+              tr.bg-white
+                th.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="Rewardners Premium es el más fácil, el Programa de Recompensas más prácticos y de bajo costo en el mercado. Personalizado a sus necesidades y requerimientos." data-toggle="popover" data-trigger="focus" Conserve
+                  | clientes fieles con
+                  br
+                  | Recompensas.
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey
+                td.text-center.bg-light-yellow = image_tag('logo-symbol.svg')
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+              tr.bg-white
+                th.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="Con la aplicación movil de Rewardners puede administrar aplicación en los planes de Rewardners ilimitado y Rewardners premium desde cualquier dispositivo móvil, sin importar dónde se encuentre, usted recibirá siempre el acceso a administrar sus promociones y su programa de recompensas, en cualquier momento y desde cualquier lugar." data-toggle="popover" data-trigger="focus" Gestione
+                  | Rewardners desde
+                  br
+                  | Dispositivos Móviles.
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+              tr
+                th.bg-white
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-default m-t-20"
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-default m-t-20"
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-default m-t-20"
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-default m-t-20"
+- else
+  .pricing-main-container
+    h3
+      span.text-orange.m-r-5
+        | REWARDNERS
+      |PROGRAMS
+    ul.breadcrumb.text-orange
+      li
+        | Step 1: Select Program
+      li
+        | Step 2: Review & Checkout
+      li
+        | Step 3: Payment
+      li
+        | Step 4: Program Confirmation
+
+    .grid.simple
+      .grid-body.p-sides-10.p-ends-10.no-border
+        .table-responsive
+          table.table.pricing-table
+            thead
+              tr
+                th.bg-white
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Free
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Unlimited
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Program
+                th.text-center.bg-orange.text-white
+                  | Rewardners
+                  div Mobile management
+            tbody
+              tr
+                th.bg-white
+                td.text-center.bg-light-blue.bold
+                  | $00.00
+                td.text-center.bg-light-blue.bold
+                  | $49.99
+                td.text-center.bg-light-blue.bold
+                  | $59.99
+                td.text-center.bg-light-blue.bold
+                  | $69.99
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="You can use Rewardners by uploading one promotion per month completely Free and reaching all your customers that are using the mobile application of Rewardners." data-toggle="popover" data-trigger="focus" Connect
+                  | with your Customers
+                  br
+                  |with One Promotion Per Month
+                td.text-center.bg-light-yellow = image_tag('logo-symbol.svg')
+                td.text-center.bg-light-grey
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey
+              tr.bg-white
+                th.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="Now you can upload unlimited number of promotions that you need to publish. You can have several promotions published simultaneously and you can also publish promotions by the moment, seasonal or by opportunity. There are no limits." data-toggle="popover" data-trigger="focus" Attract
+                  | Customers with
+                  br
+                  |Unlimited Promotions Per Month
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+                td.text-center.bg-light-yellow = image_tag('logo-symbol.svg')
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+              tr.bg-white
+                th.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="Rewardners Premium is the easiest, most practical and inexpensive Rewards Program in the market. Personalized to your needs and requirements." data-toggle="popover" data-trigger="focus" Retain
+                  |  Loyal Customers with
+                  br
+                  |Rewards
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey
+                td.text-center.bg-light-yellow = image_tag('logo-symbol.svg')
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+              tr.bg-white
+                th.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+                td.bg-white
+              tr
+                th.bg-light-grey scope="row"
+                  a.js-popover.m-r-5.text-orange href="javascript:;" data-content="With Rewardners Mobile APP you can manage Rewardners Unlimited and Rewardners Premium from any mobile device, no matter where you are, you will always get access to manage your promotions and your rewards program, at any time and from wherever you are." data-toggle="popover" data-trigger="focus" Manage
+                  | Rewardners From
+                  br
+                  |Mobile Devices.
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey
+                td.text-center.bg-light-yellow
+                td.text-center.bg-light-grey = image_tag('logo-symbol.svg')
+              tr
+                th.bg-white
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-primary m-t-20"
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-primary m-t-20"
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-primary m-t-20"
+                td.text-center.bg-white
+                  = link_to t("actions.select"), new_user_registration_path(signup_type: :business), class: "button btn btn-primary m-t-20"

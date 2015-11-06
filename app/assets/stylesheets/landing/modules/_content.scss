@@ -1,0 +1,50 @@
+.service-box{
+    padding: 30px 45px;
+    text-align: center;
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
+  .icon-box{
+    border: 4px solid #FF9200;
+    display: inline-block;
+    border-radius: 21px;
+    width: 96px;
+    height: 96px;
+    font-size: 52px;
+    line-height: 96px;
+    color: #929394;
+    margin-bottom: 15px;
+  }
+  .description-box p{
+    font-size:18px;
+    line-height:120%;
+    color: #666666;
+    font-weight: 300;
+  }
+  &.business-features{
+    .icon-box{
+      margin-top: 30px;
+      @media (max-width: 767px) {
+        border-radius: 11px;
+        width: 46px;
+        height: 46px;
+        font-size: 22px;
+        line-height: 46px;
+        margin-bottom: 15px;
+      }
+    }
+    .description-box{
+      h2{
+        color: #FF7F00;
+        font-size:19px;
+        line-height: 1.3;
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+}
+.img-responsive{
+  margin: 0 auto;
+}

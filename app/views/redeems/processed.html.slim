@@ -1,0 +1,31 @@
+.row
+  .col-sm-4.col-md-3
+    = render 'users/sidebar_options', view: "redeems"
+  .col-sm-8.col-md-9
+    .grid.simple
+      .grid-body.no-border
+        .page-header
+          h2=t('titles.history')
+        - if @redeems.present? && @redeems.count > 0
+          table.table.table-striped.js-data-table
+            thead
+              tr
+                th= t('titles.place')
+                th= t('activerecord.attributes.redeem.number_of_stars')
+                th= t('titles.description')
+                th= t('activerecord.attributes.redeem.approved_at')
+            tbody
+              - @redeems.each do |redeem|
+                tr
+                  td= redeem.place_name
+                  td= redeem.number_of_stars
+                  td= redeem.description
+                  td= redeem.approved_at_formatted
+        - else
+          table.table.table-striped
+            tboby
+              tr= t('mes.no_redeems')
+
+        .text-center
+          = will_paginate @places
+

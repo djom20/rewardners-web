@@ -1,0 +1,39 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left=t('views.subscriptions.title')
+      .grid-body
+        .row
+          .col-md-12
+            table.table.table-striped
+              - if @subscriptions.present? && @subscriptions.count > 0
+                thead
+                  tr
+                    th= t('activerecord.attributes.subscription.plan')
+                    th= t('activerecord.attributes.subscription.paypal_payer_id')
+                    th= t('activerecord.attributes.subscription.paypal_profile_id')
+                    th= t('activerecord.attributes.subscription.paid_until')
+                    th= t('titles.created_date')
+                    th= t('titles.status')
+                    th.text-center colspan="4"
+                      = t('titles.actions')
+                tbody
+                  - @subscriptions.each do |subscription|
+                    tr
+                      td= subscription.plan_name_I18n(params[:locale])
+                      td= subscription.paypal_payer_id
+                      td= subscription.paypal_profile_id
+                      td= l(subscription.paid_until, format: :long) if subscription.paid?
+                      td= subscription.created_at_formatted
+                      td
+                        span class="label label-#{ subscription.status? ? 'primary' : 'danger' }"
+                          = subscription.status_I18n
+                      td= link_to t('titles.show'), subscription
+              - else
+                tboby
+                  tr
+                    td= t('views.subscriptions.empty_list')
+
+            .text-center
+              = will_paginate @subscriptions

@@ -1,0 +1,13 @@
+- if activities.count > 0
+  - activities.each do |activity|
+    - if activity.trackable
+      = activity_info(activity)
+- else
+  li.notification__item
+    .notification-messages.warning
+      .message-wrapper
+        .heading
+          = t('titles.notifications_empty_state')
+
+li.notification__item
+  = link_to t('titles.view_all'), activities_path

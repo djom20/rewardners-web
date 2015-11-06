@@ -1,0 +1,9 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left
+          = @redeem.place_name
+      .grid-body
+        .row
+          = render 'redeems/form', redeem: @redeem

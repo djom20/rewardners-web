@@ -1,0 +1,44 @@
+.main-wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -260px;
+}
+.main-wrapper:after {
+  content: "";
+  display: block;
+}
+.main-wrapper:after {
+  height: 260px;
+}
+
+
+/*use in section headings*/
+h3.heading{
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    overflow: hidden;
+    vertical-align: middle;
+    font-family: 'Raleway', sans-serif;
+}
+h3.heading:after{
+    position: relative;
+    left: 18px;
+    content: "";
+    display: inline-block;
+    width: 200%;
+    vertical-align: middle;
+    height: .50em;
+    margin: 0 -200% 0 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-container .panel-group .panel-heading.collapsed{
+  background-color: #fff;
+}

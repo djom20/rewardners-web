@@ -1,0 +1,49 @@
+.coupon-intro_form {
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0 26px;
+  z-index: 20;
+  .btn-round{
+    min-height: 52px;
+  }
+}
+
+.m-adaptiv-form{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-group.m-round {
+  border-radius: 26px;
+  box-shadow: 0 0 0 6px rgba(0,0,0,.2);
+}
+
+.input-group .form-control:first-child, .input-group-btn:first-child>.btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.input-group.m-shadow input {
+  border: none;
+  min-height: 52px;
+}
+
+.form input.m-dark {
+  background-color:rgba(221,221,221,0.89);
+  border: none;
+  color:rgba(87,87,70,0.66);
+  font-size: 15px;
+  font-weight: 300;
+  padding: 15px 30px !important;
+}
+.btn-round, input.m-round {
+  border-radius: 40px;
+}
+
+.btn-orange {
+  background-color: rgba(239, 130, 1, 0.86);
+  color: #fff;
+  &:hover{
+    background-color: #FF8000;
+    position: inherit;
+  }
+}

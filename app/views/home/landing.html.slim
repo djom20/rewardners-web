@@ -1,0 +1,87 @@
+section.section#download
+  .container
+    .row
+      .col-sm-6.col-md-6.col-lg-6
+        = image_tag('img/ios/05_device.png', class: "img-responsive phone-front wow fadeIn", :"data-wow-duration" => "1s", :"data-wow-delay" => "1s", :"alt" => "img")
+        = image_tag('img/ios/06_device.png', class: "img-responsive phone-back wow fadeInLeft", :"data-wow-duration" => "1s", :"data-wow-delay" => "1.5s", :"alt" => "img")
+      .col-sm-6.col-md-6.col-lg-6.wow.fadeInDown
+        h2.dj= raw t("download.title", application_name: application_name)
+        = raw t("download.description")
+        .space
+        .store.m-t-40
+          .text-center
+            .separator--text.content
+              i.line
+              span.text
+                = t('banner.download')
+              i.line
+            .appstore-buttons class="wow bounceIn" data-wow-duration= "1s" data-wow-delay= "1.5s"
+              .apple.appstore__item
+                a href="#" data-wow-delay="1s"
+                  = image_tag("#{I18n.locale}/appstore_badge.png", style: "width: 152px;")
+              .google.appstore__item
+                a href="#" data-wow-delay="1.4s"
+                  = image_tag("#{I18n.locale}/googleplay_badge.png", style: "width: 152px;")
+  .clearfix
+section.section.white
+  .container
+    .row
+      .col-sm-12.col-md-12.text-center.p-t-20.p-b-20
+        h2.title = raw t('overview.title', application_name: application_name)
+    .row
+      .col-sm-4.col-md-4.p-t-50
+        .service-box class= "wow fadeInLeft" data-wow-duration= "1s" data-wow-delay= "1.5s"
+          .icon-box
+            i.icon.icon--circle-check
+          .description-box
+            p = t('overview.feature1.description')
+        .service-box class= "wow fadeInLeft" data-wow-duration= "1s" data-wow-delay= "1.5s"
+          .icon-box
+            i.icon.icon--user-place
+          .description-box
+            p = t('overview.feature2.description')
+      .col-sm-4.col-md-4.p-t-30.p-b-30.text-center
+        = image_tag("iphone-features.png", class: "img-responsive wow bounceIn", :"data-wow-duration" => "1s", :"data-wow-delay" => "1s")
+      .col-sm-4.col-md-4.p-t-50
+        .service-box class= "wow fadeInRight" data-wow-duration= "1s" data-wow-delay= "1.5s"
+          .icon-box
+            i.icon.icon--cup
+          .description-box
+            p = t('overview.feature3.description')
+        .service-box class= "wow fadeInRight" data-wow-duration= "1s" data-wow-delay= "1.5s"
+          .icon-box
+            i.icon.icon--selling
+          .description-box
+            p = t('overview.feature4.description')
+  .clearfix
+section#about
+  .container
+    .row
+      .col-sm-6.col-md-6.col-lg-6
+        = image_tag('img/ios/03_device.png', class: "img-responsive phone-back wow fadeInRight", :"data-wow-delay" => "1.5s", :"alt" => "img")
+        = image_tag('img/ios/04_device.png', class: "img-responsive phone-front wow fadeIn", :"data-wow-delay" => "1s", :"data-wow-duration"=>"2s", :"alt" => "img")
+      .col-sm-6.col-md-6.col-lg-6.about-content
+        h2= raw t("about.title", application_name: application_name)
+        p= raw t("about.description")
+        .accordion
+          #accordion.panel-group
+            .panel.wow.fadeInDown
+              .panel-heading
+                .panel-title
+                  a data-parent= "#accordion" data-toggle= "collapse" href= "#about1"
+                    = raw t("about.feature1.title")
+              #about1.panel-collapse.collapse
+                .panel-body
+                  = raw t("about.feature1.description")
+            .panel.wow.fadeInDown
+              .panel-heading
+                .panel-title
+                  a data-parent= "#accordion" data-toggle= "collapse" href= "#about2"
+                    = raw t("about.feature2.title")
+              #about2.panel-collapse.collapse
+                .panel-body
+                  = raw t("about.feature2.description")
+  .clearfix
+- content_for :javascript do
+  = javascript_include_tag "landing/index/index"
+

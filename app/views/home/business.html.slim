@@ -1,0 +1,66 @@
+section.section.white
+  .container
+    .row
+      .col-sm-12.col-md-12.text-center.p-t-20.p-b-20
+        h2.title = raw t('business.title', application_name: application_name)
+    .row
+      .col-xs-12.col-md-7
+        .service-box.business-features class= "wow bounceIn" data-wow-duration= "1s" data-wow-delay= "1s"
+          .col-md-9.col-xs-10
+            .description-box.text-right
+              h2 = t('business.feature1.title')
+              p = t('business.feature1.description')
+          .col-md-3.col-xs-2
+            .icon-box
+              i.icon.icon--network
+        .service-box.business-features class= "wow bounceIn" data-wow-duration= "1s" data-wow-delay= "1.5s"
+          .col-md-9.col-xs-10
+            .description-box.text-right
+              h2 = t('business.feature2.title')
+              p = t('business.feature2.description')
+          .col-md-3.col-xs-2
+            .icon-box
+              i.icon.icon--manager
+        .service-box.business-features class= "wow bounceIn" data-wow-duration= "1s" data-wow-delay= "2s"
+          .col-md-9.col-xs-10
+            .description-box.text-right
+              h2 = t('business.feature3.title')
+              p = t('business.feature3.description')
+          .col-md-3.col-xs-2
+            .icon-box
+              i.icon.icon--webpage
+      .col-xs-12.col-md-5.text-center.p-t-20
+        = image_tag('iphone-business-features.png', class: "img-responsive wow fadeIn", :"data-wow-duration" => "1s", :"data-wow-delay" => "1s", :"alt" => "img")
+    .row
+      .col-xs-12.col-md-5.text-center.p-t-20
+        = image_tag('iphone-business-features2.png', class: "img-responsive wow fadeIn", :"data-wow-duration" => "1s", :"data-wow-delay" => "1s", :"alt" => "img")
+      .col-xs-12.col-md-7
+        .service-box.business-features class= "wow bounceIn" data-wow-duration= "1s" data-wow-delay= "1s"
+          .col-md-3.col-xs-2
+            .icon-box
+              i.icon.icon--web-design
+          .col-md-9.col-xs-10
+            .description-box.text-left
+              h2 = t('business.feature4.title')
+              p = t('business.feature4.description')
+        .service-box.business-features class= "wow bounceIn" data-wow-duration= "1s" data-wow-delay= "1.5s"
+          .col-md-3.col-xs-2
+            .icon-box
+              i.icon.icon--credit-card
+          .col-md-9.col-xs-10
+            .description-box.text-left
+              h2 = t('business.feature5.title')
+              p = t('business.feature5.description')
+        .service-box.business-features class= "wow bounceIn" data-wow-duration= "1s" data-wow-delay= "2s"
+          .col-md-3.col-xs-2
+            .icon-box
+              i.icon.icon--report
+          .col-md-9.col-xs-10
+            .description-box.text-left
+              h2 = t('business.feature6.title')
+              p = t('business.feature6.description')
+
+
+- content_for :javascript do
+  = javascript_include_tag "landing/business/index"
+

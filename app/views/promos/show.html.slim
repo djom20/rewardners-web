@@ -1,0 +1,104 @@
+.row
+  .col-sm-8.col-md-8
+    .grid.simple
+      .grid-body
+        .row
+          .col-md-12.p-t-30
+            .clearfix
+              .options.pull-right
+                - if can? :edit, @place
+                  = link_to t('titles.edit'), edit_place_promo_path(@place, @promo), class: "btn btn-primary btn-cons"
+                  = link_to t('titles.back'), places_path, class: "btn btn-info btn-cons"
+                - else
+                  = link_to t('titles.back'), current_user ? search_promos_path : public_search_promos_path, class: "btn btn-info btn-cons"
+
+          .col-sm-12
+            .profile.clearfix
+              .image
+                = image_tag @place.banner(:full)
+              .user.clearfix
+                .avatar
+                  = image_tag @place.logo(:medium), class: "img-thumbnail"
+                h2= link_to @place.name, info_place_path(@promo.place_id)
+              .info
+                p
+                  span.glyphicon.glyphicon-globe.m-r-5
+                  span.title.m-r-5
+                    = t('titles.address')
+                    |:
+                  = @place.address
+                p
+                  span.fa.fa-location-arrow.m-r-5
+                  span.title.m-r-5
+                    = t('titles.zipcode')
+                    |:
+                  = @place.zipcode
+        .row.m-b-20
+          .col-md-12
+            .row.m-b-10
+              .col-md-8.col-md-push-4
+                h4.media-heading.m-b-10.text-orange
+                  = @promo.name
+                .place-promo.m-b-5
+                  .place-promo__item.m-b-3
+                    strong.m-r-5
+                      = "#{t('titles.zipcode')}:"
+                    = @promo.place_zipcode
+                  .place-promo__item.m-b-3
+                    strong.m-r-5
+                      = "#{t('titles.city')}:"
+                    = @promo.place_city
+                .social-share.m-b-10
+                  ul.share-list.clearfix
+                    / li.share-list__item
+                    /   = link_to "javascript:;" do
+                    /     = image_tag('icons/share.svg')
+                    li.share-list__item
+                      = social_share_button_tag("Promo! #{raw(@promo.description)}", url: URI::encode(place_promo_url(@promo.place_id, @promo.id)), image: URI::encode(image_url(@promo.banner(:thumb))), desc: URI::encode(@promo.description), popup: "true")
+
+              .col-md-4.col-md-pull-8
+                = image_tag @promo.banner(:medium), class: "media-object m-b-10"
+            .row
+              .col-md-4
+                - if user_signed_in?
+                  - if current_user.can_take_promo?(@promo.id)
+                    .action-promo id="take_untake_button_#{@promo.id}"
+                      = render "promos/promo/take_untake_button", promo: @promo
+                - else
+                  = link_to t('actions.take_promo'), new_user_session_path, class: "btn btn-primary btn-full"
+        .row.m-b-20
+          .col-md-12
+            h4.hl
+              = t('titles.description')
+            p
+              = raw(@promo.description)
+          .col-md-12
+            h4.hl
+              = t('titles.extra')
+            p
+              = raw(@promo.extra_description)
+          .col-md-12
+            h4.hl
+              = t('titles.categories')
+            p
+              = raw(@promo.categories_selected(params[:locale]))
+        ul#tab-01.nav.nav-tabs.m-b-20
+          - if @place.rewards_terms?
+            li.active
+              a href="#tab1Terms"  Terms
+          li
+            a href="#tab1Maps"  Maps
+        .tab-content
+          - if @place.rewards_terms?
+            #tab1Terms.tab-pane.active
+              .row
+                .col-md-12
+                  h4.hl
+                    i.fa.fa-file-text-o.m-r-5
+                    = t('help.terms_and_conditions')
+                  p= raw @place.rewards_terms
+          #tab1Maps.tab-pane
+            .row
+              .col-md-12
+                = image_tag "//maps.google.com/maps/api/staticmap?size=800x300&sensor=false&zoom=16&markers=#{@place.latitude},#{@place.longitude}&maptype=terrain", style: "width: 100%;"
+

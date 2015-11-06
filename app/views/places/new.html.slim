@@ -1,0 +1,10 @@
+.row
+  .col-sm-8.col-md-8
+    .grid.simple
+      .grid-title.clearfix.no-border
+        .row
+          .col-md-12
+            h4=t('views.places.create_place')
+      .grid-body.no-border
+        .row.form-row
+          = render 'places/form', place: @place, button_title: t('views.places.create_button')

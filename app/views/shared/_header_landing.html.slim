@@ -1,0 +1,42 @@
+/ header#ha-header.ha-header-hide
+/   .ha-header-perspective
+/     .ha-header-front.navbar.navbar-default
+/       .compressed
+/         .navbar-header
+/           button.navbar-toggle data-target="navbar-collapse" data-toggle="collapse" type="button"
+/             span.sr-only Toggle navigation
+/             span.icon-bar
+/             span.icon-bar
+/             span.icon-bar
+/           = link_to "/?locale=#{params[:locale]}", class: "navbar-brand compressed" do
+/             = render :partial => "shared/logo_svg", locals: {width: "237px", height: "50px", color: "#000000"}
+/         .navbar-collapse.collapse
+/           ul.nav.navbar-nav.navbar-right
+/             li
+/               a href="/"
+/                 = t("navbar.home")
+/             li
+/               a href=("#{business_path}#price")
+/                 = t("navbar.price")
+/             li
+/               a href=("#{business_path}#empresas" )
+/                 = t("navbar.business")
+/             li
+/               a href=("#{new_user_registration_path(:signup_type => :default_user)}")
+/                 = t("navbar.users")
+/             li
+/               a href=("#{user_session_path}")
+/                 = t("navbar.signin")
+/             li.dropdown
+/               a.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#" role="button"
+/                 =t('navbar.lan')
+/                 span.caret
+/               ul.dropdown-menu.language-selector role="menu"
+/                 li.language-selector__item
+/                   = link_to current_url(locale: :es) do
+/                     = image_tag("icons/es.png")
+/                     =t('navbar.spanish')
+/                 li.language-selector__item
+/                   = link_to current_url(locale: :en) do
+/                     = image_tag("icons/en.png")
+/                     =t('navbar.english')

@@ -1,0 +1,35 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left= t('titles.places_acept_reject')
+      .grid-body
+        .row
+          .col-md-12
+            table.table.table-striped
+              - if @taken_promos.present? && @taken_promos.count > 0
+                thead
+                  tr
+                    th= t('titles.name')
+                    th= t('titles.code')
+                    th= t('titles.place')
+                    th= t('titles.taken_by')
+                    th= t('titles.taken_at')
+                    th.text-center colspan="4"
+                      = t('titles.actions')
+                tbody
+                  - @taken_promos.each do |taken_promo|
+                    tr
+                      td= link_to taken_promo.promo_name, place_promo_path(taken_promo.promo.place, taken_promo.promo)
+                      td= taken_promo.promo_code
+                      td= link_to taken_promo.promo.place.name, place_path(taken_promo.promo.place)
+                      td= taken_promo.user.full_name_or_company
+                      td= taken_promo.created_at_formatted
+                      td colspan= "2" id="taken_promo_#{taken_promo.id}"
+                        = render "taken_promos/actions/take_promo_actions", taken_promo: taken_promo
+              - else
+                tboby
+                  tr
+                    td= t('views.taken_promo.empty_list')
+            .text-center
+              = will_paginate @taken_promos

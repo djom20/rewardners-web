@@ -1,0 +1,2 @@
+- message = "<b>#{activity.trackable.user.full_name_or_company}</b> #{I18n.t("activity.taken_promo.untake")} <b>#{activity.trackable.promo_name.titleize}</b>"
+= render 'public_activity/default_message_format', activity: activity, message: message, notification_type: "info"

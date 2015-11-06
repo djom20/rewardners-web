@@ -1,0 +1,9 @@
+- if activity.trackable
+  .panel.panel-default
+    .notification-messages class="#{notification_type}"
+      span= raw(message)
+      | &nbsp;
+      small.text-muted
+        i.fa.fa-clock-o
+        | &nbsp;
+        = "#{time_ago_in_words(activity.created_at)}"

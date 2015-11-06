@@ -1,0 +1,12 @@
+doctype html
+html
+  = render "shared/head_landing"
+  body(class = "#{@layout_class_name}")
+    .main-wrapper
+      = render :partial => "shared/header_landing"
+      .section.ha-waypoint data-animate-down="ha-header-hide" data-animate-up="ha-header-hide"
+        = render "shared/navigation_landing"
+        = render partial: "shared/banner_home", locals: { banner_option: controller.action_name }
+      = yield
+    = render :partial => "shared/footer"
+    = render :partial => "shared/scripts"

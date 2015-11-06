@@ -1,0 +1,32 @@
+.user-menu.bottom-15
+  ul
+    li class="#{view == 'show' ? 'active' : ''}"
+      = link_to user_path(current_user) do
+        i.sign.fa.fa-user.bg-orange
+        = t('titles.my_account')
+        i.fa.fa-chevron-right.pull-right
+    li class="#{view == 'taken_promos' ? 'active' : ''}"
+      = link_to taken_promos_users_path do
+        i.sign.fa.fa-th-list.bg-orange
+        = t('titles.my_coupons')
+        i.fa.fa-chevron-right.pull-right
+    li class="#{view == 'favorite_places' ? 'active' : ''}"
+      = link_to favorite_places_users_path do
+        i.sign.fa.fa-heart.bg-orange
+        = t('titles.my_favorites')
+        i.fa.fa-chevron-right.pull-right
+    li class="#{view == 'stars' ? 'active' : ''}"
+      = link_to stars_places_path do
+        i.sign.fa.fa-star.bg-orange
+        = t('titles.my_stars')
+        i.fa.fa-chevron-right.pull-right
+    li class="#{view == 'redeems' ? 'active' : ''}"
+      = link_to processed_redeems_path do
+        i.sign.fa.fa-qrcode.bg-orange
+        = t('titles.my_redeems')
+        i.fa.fa-chevron-right.pull-right
+    li
+      = link_to destroy_user_session_path, :method => :delete do
+        i.sign.fa.fa-sign-out.bg-red
+        = t('titles.signout')
+        i.fa.fa-chevron-right.pull-right

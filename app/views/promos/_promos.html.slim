@@ -1,0 +1,12 @@
+- if promos.present? && promos.count > 0
+  row.promos-list.clearfix
+    - promos.each do |promo|
+      = render 'promos/promo/show', promo: promo
+
+  - if promos.count > 10
+    hr
+  .text-center
+    = will_paginate promos
+- else
+  p.muted.margin-top-10.p-l-30=t('mes.no_coupons')
+

@@ -1,0 +1,7 @@
+.row
+  .col-md-8
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left= t('views.places.edit_place')
+      .grid-body
+        = render 'places/form', place: @place, button_title: t('views.places.update_button')

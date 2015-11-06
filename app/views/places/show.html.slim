@@ -1,0 +1,69 @@
+.row
+  .col-sm-8.col-md-8
+    .grid.simple
+      .grid-body
+        .row
+          .col-md-12.p-t-30
+            .clearfix
+              .options.pull-right
+                - if can? :edit, @place
+                  = link_to t('titles.edit'), edit_place_path(@place), class: "btn btn-primary btn-cons"
+                  = link_to t('titles.back'), places_path, class: "btn btn-info btn-cons"
+                - else
+                  = link_to t('titles.back'), current_user ? search_promos_path : public_search_promos_path, class: "btn btn-info btn-cons"
+          .col-sm-12
+            .profile.clearfix
+              .image
+                = image_tag @place.banner(:full)
+              .user.clearfix
+                .avatar
+                  = image_tag @place.logo(:medium), class: "img-thumbnail"
+                .pull-left
+                  h2= @place.name
+                - if user_signed_in?
+                  - if current_user.can_like_place?(@place.id)
+                    .pull-right
+                      div id="like_unlike_#{@place.id}" style="display:inline-block;"
+                        = render "places/like_unlike/like_unlike_actions", place: @place
+              .info
+                p
+                  span.glyphicon.glyphicon-globe.m-r-5
+                  span.title.m-r-5
+                    = t('titles.address')
+                    |:
+                  = @place.address
+                p
+                  span.fa.fa-location-arrow.m-r-5
+                  span.title.m-r-5
+                    = t('titles.zipcode')
+                    |:
+                  = @place.zipcode
+
+        .row
+          .col-md-12
+            h4.hl
+              i.fa.fa-info-circle.m-r-5
+              = t('activerecord.attributes.user.general_information')
+            table.table
+              tbody
+                tr
+                  td.text-muted
+                    = t('titles.email')
+                    |:
+                  td= @place.email
+                tr
+                  td.text-muted
+                    = t('titles.phone')
+                    |:
+                  td= @place.phone
+        .row.m-b-40
+          .col-sm-12
+            .row
+              .col-md-12.m-b-20
+                = image_tag "//maps.google.com/maps/api/staticmap?size=800x300&sensor=false&zoom=16&markers=#{@place.latitude},#{@place.longitude}&maptype=terrain", style: "width: 100%;"
+              .col-md-12
+                - if @place.rewards_terms?
+                  h4.hl
+                    i.fa.fa-file-text-o.m-r-5
+                    = t('help.terms_and_conditions')
+                  p.well= raw @place.rewards_terms.html_safe

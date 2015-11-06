@@ -1,0 +1,10 @@
+li
+  a href= "javascript:;"
+    i class= "fa fa-#{category.icon}"
+    span.title
+      = category.name_I18n(params[:locale])
+    span.selected
+    span.arrow
+  - if category.has_subcategories?
+    ul.sub-menu
+      = render partial: 'promos/sidebar/subcategory', collection: category.subcategories, as: :subcategory

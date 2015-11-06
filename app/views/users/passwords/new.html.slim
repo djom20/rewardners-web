@@ -1,0 +1,18 @@
+.row
+  .col-md-8
+    .grid.simple
+      .grid-body.no-border
+        = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+          = f.error_notification
+          .row
+            .col-md-12
+              h4 = t('devise.passwords.forgot')
+              .row.form-row
+                .col-md-12
+                  = f.input :email, required: true, autofocus: true
+          .form-actions
+            .clearfix.m-b-20
+              .pull-right
+                = f.button :submit, t('devise.passwords.reset'), class: "btn btn-primary btn-cons"
+                = link_to t('titles.cancel'), root_path, class: "button btn btn-white btn-cons"
+            = render "users/shared/links"

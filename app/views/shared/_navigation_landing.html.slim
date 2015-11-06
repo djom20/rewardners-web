@@ -1,0 +1,47 @@
+.navbar.navbar-transparent.navbar-top role="navigation"
+  .container
+    .top-header-container
+      .top-header-container__item
+        ul.language-selector role="menu"
+          li.language-selector__item
+            = link_to current_url(locale: :en) do
+              = image_tag("icons/en.png")
+          li.language-selector__item
+            = link_to current_url(locale: :es) do
+              = image_tag("icons/es.png")
+  .container
+    .compressed
+      .navbar-header
+        button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        i.fa.fa-dot-global-o
+        = link_to "/?locale=#{params[:locale]}", class: "navbar-brand compressed" do
+          = render :partial => "shared/logo_svg", locals: {width: "237px", height: "50px", color: "#FFFFFF", locale: locale}
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav.navbar-right
+          - if controller.action_name == "business"
+            li
+              = link_to pricing_path do
+                = t("navbar.price")
+          li
+            = link_to "#{business_path}" do
+              = t("navbar.business")
+          - if controller.action_name == "business"
+            li
+              = link_to new_user_registration_path(:signup_type => :business) do
+                = t("navbar.users_business")
+          - else
+            li
+              = link_to new_user_registration_path(:signup_type => :default_user) do
+                = t("navbar.users_default")
+          - if controller.action_name == "business"
+            li
+              = link_to user_session_path do
+                = t("navbar.signin_business")
+          - else
+            li
+              = link_to user_session_path do
+                = t("navbar.signin_default")

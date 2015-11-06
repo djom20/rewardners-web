@@ -1,0 +1,17 @@
+#home.tp-banner-container
+  video#video1 autoplay="" poster="https://s3.amazonaws.com/rewardners-pr/videos/#{banner_option}/banner1.jpg" onended="run()" preload="metadata"
+    source#mp4Source src="https://s3.amazonaws.com/rewardners-pr/videos/#{banner_option}/banner1.mp4" type="video/mp4"
+    source#oggSource src="https://s3.amazonaws.com/rewardners-pr/videos/#{banner_option}/banner1.ogg" type="video/ogg"
+    source#webmSource src="https://s3.amazonaws.com/rewardners-pr/videos/#{banner_option}/banner1.webm" type="video/webm"
+  .tp-dottedoverlay.twoxtwo
+  .merchant-hero-body
+    .container
+      h1.merchant-hero-title
+        =raw t("#{banner_option}.intro", application_name: application_name)
+      h2.merchant-hero-subtitle
+        =raw t("#{banner_option}.intro_small", application_name: application_name)
+      .col-sm-12.col-md-12.col-lg-12.text-center
+        .btn.btn-purple.btn-lg.play-icon-large.btn-large.signup-button
+          = link_to new_user_registration_path(signup_type: banner_option.eql?("landing") ? :default_user : banner_option.to_sym), class: "btn-link" do
+            =raw t("#{banner_option}.bntrs", application_name: application_name)
+  = render 'shared/search_promos_form', current_form_path: public_search_promos_path

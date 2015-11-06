@@ -1,0 +1,13 @@
+.row
+  .col-sm-8.col-md-8
+    .grid.simple
+      .grid-title.clearfix.no-border
+        .row
+          .col-md-12
+            h4
+              span.m-r-5
+                =t('views.promos.create_promo')
+              = @place.name
+      .grid-body.no-border
+        .row.form-row
+          = render 'promos/form', place: @place, promo: @promo, button_title: t('views.promos.create_button')

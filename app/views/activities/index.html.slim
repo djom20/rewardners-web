@@ -1,0 +1,14 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left= t('titles.activities')
+        .pull-right.p-t-5
+      .grid-body
+        .row
+          .col-md-12
+            - if @activities.count > 0
+              - @activities.each do |activity|
+                = render_activity activity
+            - else
+              = render 'activities/empty_activities'

@@ -1,0 +1,37 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left
+          span.m-r-5
+            = t('titles.redeem')
+          small= t('titles.history')
+      .grid-body
+        .row
+          .col-md-12
+            - if @redeems.count > 0
+              table.table.table-striped.js-data-table
+                thead
+                  tr
+                    th= t('titles.place')
+                    th= t('titles.user')
+                    th= t('activerecord.attributes.redeem.approved_at')
+                    th= t('activerecord.attributes.redeem.approved_by')
+                    th= t('activerecord.attributes.redeem.description')
+                    th= t('titles.actions')
+                tbody
+                  - @places.each do |place|
+                    tr
+                      td= link_to redeem.place_name, place_path(redeem.place)
+                      td= redeem.user.full_name_or_company
+                      td= redeem.approved_at
+                      td= redeem.approver.full_name_or_company
+                      td= redeem.description
+                      td
+                        =  link_to link_to t('titles.destroy'), redeem_path(redeem), method: :delete, data: { confirm: t('actions.delete') }, class: "btn btn-danger"
+            - else
+              table.table.table-striped
+                tbody
+                  tr
+                    td colspan="6"
+                      = t('mes.no_redeems')

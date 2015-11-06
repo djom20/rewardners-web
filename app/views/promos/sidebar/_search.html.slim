@@ -1,0 +1,6 @@
+.page-sidebar.m-t-30
+  .page-sidebar-wrapper
+    .menu-title
+      i.fa.fa-folder-o
+      = t('titles.categories')
+    ul= render partial: 'promos/sidebar/category', collection: @categories

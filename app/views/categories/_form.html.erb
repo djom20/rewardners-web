@@ -1,0 +1,13 @@
+<%= simple_form_for(category) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :category_type, collection: [["Branch", 1], ["Leaf", 2]] %>
+    <%= f.input :icon %>
+    <%= f.hidden_field :category_id, value: !parent.nil? ? parent.id : nil %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

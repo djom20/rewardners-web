@@ -1,0 +1,2 @@
+$(".js-load-notification-count").html("<%= @activities_count %>");
+$(".notifications-list").html("<%= j(render 'tiny_activities', activities: @activities) %>");

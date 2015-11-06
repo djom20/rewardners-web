@@ -1,0 +1,22 @@
+.row
+  .col-md-8
+    .grid.simple
+      .grid-body.no-border
+        = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = f.error_notification
+          .row
+            .col-md-12
+              h4 Login
+              .row.form-row
+                .col-md-12
+                  = f.input :email, required: false, autofocus: true
+                .col-md-12
+                  = f.input :password, required: false
+          .form-actions
+            .clearfix.m-b-20
+              .pull-left
+                = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+              .pull-right
+                = f.button :submit, t('actions.session'), class: "btn btn-primary btn-cons"
+                = link_to t('titles.cancel'), root_path, class: "button btn btn-white btn-cons"
+            = render "users/shared/links"

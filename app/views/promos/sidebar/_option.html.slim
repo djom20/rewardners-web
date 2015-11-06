@@ -1,0 +1,4 @@
+li.js-option-category
+  = link_to user_signed_in? ? search_promos_path(category: option.id, search: params[:search]) : public_search_promos_path(category: option.id, search: params[:search]), remote: true do
+    span.title
+      = option.name_I18n(params[:locale])

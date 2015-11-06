@@ -1,0 +1,13 @@
+doctype html
+html
+  = render "shared/head"
+  body(class = "#{@layout_class_name}")
+    .main-wrapper
+      = render :partial => "shared/header"
+      .container
+        .row
+          .col-sm-6.col-sm-offset-3
+            = render "shared/flash_messages", flash: flash
+        = yield
+    = render "shared/footer"
+    = render "shared/scripts"

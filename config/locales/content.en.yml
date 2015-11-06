@@ -1,0 +1,94 @@
+en:
+  navbar:
+    home: Home
+    features: Options
+    overview: Resume
+    about: Share
+    download: Download
+    screenshots: Screenshots
+    contact: Contact
+    business: Business
+    users_default: User Sign up
+    users_business: Partner Sign up
+    signin_default: User Log in
+    signin_business: Partner Log in
+    users: Sign Up
+    signin: Sign In
+    english: English
+    spanish: Spanish
+    lan: Language
+    price: Pricing
+
+  download_now: ¡Download now for FREE!
+  lear_more: Learn more
+  why_use: ¿Why use <span class="highlight">%{application_name}?</span>
+  why_use_description: --
+  feature1:
+    title: Fully <span class="highlight">Responsive</span>
+    description: --
+  feature2:
+    title: Font-Awesome <span class="highlight">300+ Icons</span>
+    description: --
+  feature3:
+    title: HTML5 &amp; CSS3 <span class="highlight">Valid</span>
+    description: --
+  overview:
+    title:  Start using <span class="highlight">%{application_name}</span> today
+    description: Share With Friends and Family All The Benefits That The Local Businesses in Your City Have To Offer.
+    feature1:
+      title: --
+      description: Receive Promotions and Prizes With Your Purchases to Support All Local Businesses in Your City.
+    feature2:
+      title: --
+      description: Always Take With You, The Promotions and Prizes That Your Local City Businnesses Have To Offer.
+    feature3:
+      title: --
+      description: Receive Promotions Relevant to Your Life Style in The City You Live, Where You Work, or The City You Visit.
+    feature4:
+      title: --
+      description: Instantaneously Find Benefits of Local Businesses that You Did Not Know, and Explore Promotions of New Local Businesses.
+  about:
+    title: <span class="highlight">%{application_name}</span> Share with everyone!
+    description: Through Rewardners you can instantaneously share with family and friends all of the local businesses’ promotions in your city. It is easy and convenient. The moment at which your friends and family use the Rewardners application, everyone will be able to mutually send the promotions of the businesses that they like the most. Without using your text messages, you can send messages with your favorite promotions from your Rewardners mobile application to the Rewardners mobile application of your family and friends, completely free.
+    feature1:
+      title: <i class="fa fa-plus-circle"></i><h4>Your savings <span class="highlight">And prizes always in your hands</span></h4>
+      description: With Rewardners you schedule all the businesses that you will visit in family or professionally through your day. You start by organizing where you will take the best promotion to drink your favorite cup of tea or coffee, as well as where you will collect the most points for your daily consumptions. With Rewardners you always have savings and you always accumulate points, even as by just leaving your clothes in your favorite laundry. Also, you can find daily promotions to eat lunch with friends or clients, at the best price and always collecting points. At the end of your day, you will be able to find the best place to get together with your friends or to eat dinner with your family.
+    feature2:
+      title: <i class="fa fa-plus-circle"></i><h4>Your <span class="highlight">favorites</span></h4>
+      description: Through the Rewardners mobile application you will be able to select all of your favorite businesses in your own unlimited list. In this way, your will receive, in relevant ways, notifications from your favorite businesses that there is a new promotion; also, reminders of your accumulated points status that you have with each one of them.
+    feature3:
+      title: --
+      description: --
+  download:
+    title: Download, use and enjoy <span class="highlight">%{application_name}</span> completely free
+    description: <p>Since the moment you start using Rewardners, you will have access to all promotions that your local businesses in your City have to offer. With Rewardners you can select all of your favorite businesses so that you can receive promotions relevant to your lifestyle, and you can always be notified of your collected points from your most frequently visited businesses. Also, you will be able to visit all new businesses that have opened their doors and that you still do not know anything about them. It doesn’t matter when or where you go, with Rewardners you always save, you always accumulate points to obtain prizes, and you will always know what your City has to offer.</p>
+  screenshots:
+    title: <span class="highlight">%{application_name}</span> Screenshots
+    description: Rewardners is an intuitive application that can be used by anyone , its dynamic performance shows us the way to get the reward of our favorite places .
+  landing:
+    intro: The new mobile application that helps you to save money and redeem rewards with your local purchases
+    intro_small: "Now you can receive, take and share promotions and rewards from your favorite places"
+    bntrs: SIGN UP FOR FREE
+  business:
+    intro: Your business in total control of your daily marketing
+    intro_small: No Contracts, No External Devices, No Up Front Payments, & No Highly Monthly Fees
+    bntrs: SIGN UP FOR FREE
+    title: <span class="highlight">%{application_name}</span> for Business
+    feature1:
+      title: TOTAL CONTROL
+      description: Now your businness will be able to instantaneously send Digital Coupons with all the promotions that your Businness needs to do, without the use of text messages, without electronic mails, without phone calls and above all without the use of printed materials.
+    feature2:
+      title: YOU CHOOSE
+      description: Through Rewardners you choose to whom you send the Digital Coupons of your Businness. They can go just to Users, just to Businesses, or they can go to both. You choose to whom. You will know who have received them at the moment that they are presented in your businness, and they will show you through the Rewardners mobile application, the digital coupon with the promotion that they liked the most.
+    feature3:
+      title: THE REWARDS PROGRAM
+      description: The Rewardners points program permits you to manage it as you want. You place the amount of points to accumulate and you place the prizes to receive. The users will accumulate points in their mobile application every time that they consume a product or service in your businness and will constantly receive a reminder of how many points they have accumulated; in this way, they will always be pending on returning to consume in your businness.
+    feature4:
+      title: UNLIMITED COSTUMIZATION
+      description: Now with Rewardners you can draw customer traffic into your business the way you like. The digital coupons are received instantaneously in the Rewardners mobile application. This means that your digital coupons can take promotions that are valid for hours, days, weeks or months. You choose the validity period and the terms on how each promotion works. Agregar Imagen o fondos
+    feature5:
+      title: AT VERY LOW COST AND IN NO TIME
+      description: With Rewardners, your business will greatly save money and time, by reducing and inclusively eliminating high costs, production commissions, shipping of traditional publicity, and through simple steps, you or your business staff will be able to send promotions instantaneously, without taking anybody’s time.
+    feature6:
+      title: ALWAYS IN CONTROL
+      description: With the Rewardners mobile application, now you can manage from your Smart phone, the sending of digital coupons and the application and authorization of the users rewards program every time that they make a purchase. You can send Digital Coupons from any location and at any moment. Also, you will be able to give access to the management to as many members of your staff as you need.

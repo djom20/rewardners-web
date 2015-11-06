@@ -1,0 +1,21 @@
+.row
+  .col-md-8
+    .grid.simple
+      .grid-body.no-border
+        = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+          = f.error_notification
+          = f.input :reset_password_token, as: :hidden
+          .row
+            .col-md-12
+              h4 = t('devise.passwords.title')
+              .row.form-row
+                .col-md-12
+                  = f.input :password, label: t('devise.passwords.new'), required: true, autofocus: true
+                .col-md-12
+                  = f.input :password_confirmation, label: t('devise.passwords.confirm'), required: true
+          .form-actions
+            .clearfix.m-b-20
+              .pull-right
+                = f.button :submit, t('devise.passwords.change_button'), class: "btn btn-primary btn-cons"
+                = link_to t('titles.cancel'), root_path, class: "button btn btn-white btn-cons"
+            = render "users/shared/links"

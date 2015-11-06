@@ -1,0 +1,42 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left= t('views.places.index')
+        .pull-right.p-t-5
+          = link_to t('views.places.new_button'), new_place_path, class: "btn btn-primary btn-cons"
+          - if current_user
+            = link_to t('titles.favorite_places'), favorite_places_users_path, class: "btn btn-primary btn-cons"
+      .grid-body
+        .row
+          .col-md-12
+            table.table.table-striped
+              - if @places.present? && @places.count > 0
+                thead
+                  tr
+                    th= t('titles.name')
+                    th= t('titles.address')
+                    th= t('titles.phone')
+                    th= t('titles.zipcode')
+                    th= t('titles.email')
+                    th.text-center colspan="4"
+                      = t('titles.actions')
+                tbody
+                  - @places.each do |place|
+                    tr
+                      td= place.name
+                      td= place.address
+                      td= place.phone
+                      td= place.zipcode
+                      td= place.email
+                      td= link_to t('views.places.views_coupons'), place_promos_path(place)
+                      td= link_to t('titles.show'), place
+                      td= link_to t('titles.edit'), edit_place_path(place)
+                      td= link_to t('titles.destroy'), place, class: "object-delete", method: :delete, data: { confirm: t('actions.delete'), name: place.name }
+              - else
+                tboby
+                  tr
+                    td= t('views.places.empty_list')
+
+            .text-center
+              = will_paginate @places

@@ -1,0 +1,25 @@
+.row
+  .col-sm-4.col-md-3
+    = render 'users/sidebar_options', view: "stars"
+  .col-sm-8.col-md-9
+    .grid.simple
+      .grid-body.no-border
+        .page-header
+          h2=t('titles.stars_by_places')
+        table.table.table-striped
+          - if @places.length > 0
+            thead
+              tr
+                th= t('titles.place')
+                th= t('titles.places_stars')
+            tbody
+              - @places.each do |place|
+                tr
+                  td= place["name"]
+                  td= place["total_stars"]
+          - else
+            tboby
+              tr= t('mes.no_stars_by_place')
+
+        .text-center
+          = will_paginate @places

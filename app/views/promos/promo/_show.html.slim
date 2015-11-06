@@ -1,0 +1,44 @@
+.col-md-6
+  .promos-list__item
+    .row.m-b-10
+      .col-md-6.col-md-push-6
+        h4.media-heading.m-b-10
+          = link_to promo.name, place_promo_path(promo.place_id, promo.id)
+        .place-promo.m-b-5
+          .place-promo__item.m-b-3
+            strong.m-r-5
+              = "#{t('titles.place')}:"
+            = link_to promo.place_name, info_place_path(promo.place_id)
+          .place-promo__item.m-b-3
+            strong.m-r-5
+              = "#{t('titles.zipcode')}:"
+            = promo.place_zipcode
+          .place-promo__item.m-b-3
+            strong.m-r-5
+              = "#{t('titles.city')}:"
+            = promo.place_city
+        .social-share.m-b-10
+          ul.share-list.clearfix
+            / li.share-list__item
+            /   i id="share_via_email_#{promo.id}" class= "fa fa-share-alt js-share-via-email-action"
+            li.share-list__item
+              = social_share_button_tag("Promo! #{raw(promo.description)}", url: URI::encode(place_promo_url(promo.place_id, promo.id)), image: URI::encode(image_url(promo.banner(:thumb))), desc: URI::encode(promo.description), popup: "true")
+      .col-md-6.col-md-pull-6
+        = image_tag promo.banner(:medium), class: "media-object m-b-10"
+        .description.text-center
+          = raw promo.description.truncate(80)
+          | &nbsp;
+          = link_to t('titles.show_more'), place_promo_path(promo.place_id, promo.id), class: "text-orange"
+    .row
+      .col-md-6.col-md-push-6
+        - if user_signed_in?
+          - if current_user.can_take_promo?(promo.id)
+            .action-promo id="take_untake_button_#{promo.id}"
+              = render "promos/promo/take_untake_button", promo: promo
+        - else
+          = link_to t('actions.take_promo'), new_user_session_path, class: "btn btn-primary btn-full"
+
+= render 'promos/promo/share_via_email', promo: promo
+
+- content_for :javascript do
+  = javascript_include_tag "promos/promo/show"

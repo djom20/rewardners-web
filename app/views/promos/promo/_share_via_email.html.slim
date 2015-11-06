@@ -1,0 +1,36 @@
+#shareEmailModal.modal.fade aria-hidden= "true" aria-labelledby= "myModalLabel" role= "dialog" style= "display: none;" tabindex= "-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss= "modal" type= "button" ×
+
+      /   h4#myModalLabel.semi-bold Share your promos via email
+      / = simple_form_for_tag , url: contacts_path, method: :post do |f|
+      /   .modal-body
+      /     = f.error_notification
+      /     .row.form-row
+      /       .col-md-8
+      /         input.form-control placeholder= "Your Card Number" type= "text"
+      /         = f.input :email, label: t('titles.email'), required: true
+      /   .modal-footer
+      /     button.btn.btn-default data-dismiss= "modal" type= "button" Close
+      /     = f.button :submit, t('titles.submit'), class: "btn btn-primary btn-cons"
+      /     button.btn.btn-primary type= "button"
+      /       = t('titles.send')
+
+          / = simple_form_for @contact, url: contacts_path, method: :post do |f|
+          /   = f.error_notification
+          /   .row.form-row
+          /     .col-md-12
+          /       = f.input :name, label: t('titles.name'), required: true
+          /     .col-md-12
+          /       = f.input :email, label: t('titles.email'), required: true
+          /     .col-md-12
+          /       = f.input :message_title, label: t('titles.message_title'), required: true
+          /     .col-md-12
+          /       = f.input :message_body, label: t('titles.message_body'), as: :text, required: true
+          /   .form-actions
+          /     .clearfix.m-b-20
+          /       .pull-right
+          /         = f.button :submit, t('titles.submit'), class: "btn btn-primary btn-cons"
+          /         = link_to t('titles.cancel'), root_path, class: "button btn btn-white btn-cons"

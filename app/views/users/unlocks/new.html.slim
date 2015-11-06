@@ -1,0 +1,19 @@
+.row
+  .col-md-8
+    .grid.simple
+      .grid-body.no-border
+        = simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
+          = f.error_notification
+          = f.full_error :unlock_token
+          .row
+            .col-md-12
+              h4 Resend unlock instructions
+              .row.form-row
+                .col-md-12
+                  = f.input :email, required: true, autofocus: true
+          .form-actions
+            .clearfix.m-b-20
+              .pull-right
+                = f.button :submit, "Resend unlock instructions", class: "btn btn-primary btn-cons"
+                = link_to t('titles.cancel'), root_path, class: "button btn btn-white btn-cons"
+            = render "users/shared/links"

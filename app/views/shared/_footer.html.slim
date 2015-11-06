@@ -1,0 +1,48 @@
+.section.footer
+  .container
+    .p-t-30
+      .row
+        .col-md-3.col-xs-12.text-center
+          = link_to root_path, class: "logo-footer" do
+            = render :partial => "shared/logo_svg", locals: {width: "219px", height: "67px", color: "#fff"}
+        .col-md-6.col-xs-12.m-b-20
+          .row
+            .col-md-4.col-xs-12
+              ul.nav-footer
+                li.nav-footer__item
+                  = link_to t('footer.links.about_us'), about_us_path
+                li.nav-footer__item
+                  = link_to t('footer.links.legal'), legal_path
+                li.nav-footer__item
+                  = link_to t('footer.links.contact_us'), new_contact_path
+                li.nav-footer__item
+                  = link_to t('footer.links.faq'), faq_path
+            .col-md-8.col-xs-12
+              ul.nav-footer.right
+                li.nav-footer__item
+                  = link_to t('footer.links.bring_rewardners_to_your_city'), bring_rewardners_to_your_city_path
+                li.nav-footer__item
+                  = link_to t('footer.links.join_rewardners'), join_rewardners_path
+                li.nav-footer__item
+                  = link_to t('footer.links.local_projects'), local_projects_path
+                li.nav-footer__item
+                  = link_to t('footer.links.rewardners_international'), rewardners_international_path
+        .col-md-3.col-xs-12.m-b-20.text-center
+          ul.social-links
+            li.social-links__item
+              a href=""
+                i.icon.icon--facebook
+            li.social-links__item
+              a href=""
+                i.icon.icon--twitter
+            li.social-links__item
+              a href=""
+                i.icon.icon--instagram
+  .section.copyright
+    .container.text-center.p-t-10.p-b-10
+      .copyright--text
+        ="#{Time.now.year}"
+        |   &nbsp;
+        = application_name
+        | &nbsp;LLC.&nbsp;
+        ="#{t('footer.copyright')}"

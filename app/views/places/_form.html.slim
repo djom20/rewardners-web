@@ -1,0 +1,60 @@
+= simple_form_for(place) do |f|
+  = f.error_notification
+  .row
+    .col-md-12
+      = f.input :name, label: t('titles.name'), required: true
+    .col-md-6
+      = f.input :address, label: t('titles.address'), required: true
+    .col-md-6
+      = f.input :city, label: t('activerecord.attributes.place.city'), required: false
+    .col-md-6
+      = f.input :zipcode, label: t('titles.zipcode'), required: true
+    .col-md-6
+      = f.input :phone, label: t('titles.phone'), required: false
+    .col-md-6
+      = f.label t('activerecord.attributes.place.country')
+      = f.country_select :country, only: %w(US CO), prompt: t('views.places.country_prompt'), required: false
+    .col-md-6
+      = f.input :email, label: t('titles.email'), required: false
+    .col-md-6
+      = f.label t('activerecord.attributes.place.logo'), required: true
+      .thumbnail
+        .avatar
+          span.thumbnail
+            = image_tag place.logo(:medium)
+      .col-md-12
+        .has-error
+          = f.error :logo
+        = f.file_field :logo, label: false, required: true, class: "js-dropzone"
+    .col-md-6
+      = f.label t('activerecord.attributes.place.banner'), required: true
+      .thumbnail
+        .avatar
+          span.thumbnail
+            = image_tag place.banner(:medium)
+      .col-md-12
+        .has-error
+          = f.error :banner
+        = f.file_field :banner, label: false, required: true, class: "js-dropzone"
+    .col-md-12.m-b-20
+      fieldset.gllpLatlonPicker
+        .gllpMap Google Maps
+        input.gllpZoom type="hidden" value="16"
+        .row.p-t-20
+          .col-md-10
+            .row
+              .col-md-6
+                = f.input :latitude, label: t('activerecord.attributes.place.latitude'), required: true, input_html:{class: "gllpLatitude"}
+              .col-md-6
+                = f.input :longitude, label: t('activerecord.attributes.place.longitude'), required: true, input_html:{class: "gllpLongitude"}
+          .col-md-2
+            input.gllpUpdateButton type="button" value="update map" class="btn btn-primary m-t-25"
+    .col-md-12
+      = f.input :rewards_terms, as: :text, input_html: { class: "wysihtml5", rows: 5 }, label: t('activerecord.attributes.place.rewards_terms'), required: false
+  .form-actions
+    .clearfix.m-b-20
+      .pull-right
+        = f.button :submit, "#{button_title}", class: "btn btn-primary btn-cons"
+        = link_to t('titles.cancel'), places_path, class: "btn btn-white btn-cons"
+- content_for :javascript do
+  = javascript_include_tag "shared/places"

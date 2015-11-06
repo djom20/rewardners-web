@@ -1,0 +1,10 @@
+.row
+  .col-md-8
+    .grid.simple
+      .grid-title.clearfix
+        h3.pull-left
+          span.m-r-5
+            = t('titles.edit')
+          small= @promo.name
+      .grid-body
+        = render 'promos/form', place: @place, promo: @promo, button_title: t('views.promos.update_button')

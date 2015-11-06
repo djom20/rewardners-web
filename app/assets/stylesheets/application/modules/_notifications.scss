@@ -1,0 +1,12 @@
+.notifications-list{
+  min-width: 300px;
+  .notification__item{
+    padding: 5px 10px;
+    &:first-child{
+      padding-top: 10px;
+    }
+    &:last-child{
+      padding-bottom: 10px;
+    }
+  }
+}

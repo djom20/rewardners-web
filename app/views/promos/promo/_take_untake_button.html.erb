@@ -1,0 +1,7 @@
+<%=
+if promo.taken_by? current_user
+  link_to t('actions.taken_promo'), untake_place_promo_path(promo.place, promo), method: :delete, data: { confirm: t('actions.delete') }, remote: true, class: "btn btn-success btn-lg btn-full"
+else
+  link_to t('actions.take_promo'), take_place_promo_path(promo.place, promo), method: :post, remote: true, class: "btn btn-primary btn-lg btn-full"
+end
+%>

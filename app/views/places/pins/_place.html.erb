@@ -1,0 +1,8 @@
+<address>
+  <strong><%= link_to place.name.upcase, info_place_path(place) %></strong><br>
+  <a href="mailto:#"><%= place.user_email %></a><br>
+  <%= place.address.upcase %><br>
+  <% unless place.phone %>
+  <abbr title="Phone">Phome:</abbr> <%= place.phone %>
+  <% end %>
+</address>

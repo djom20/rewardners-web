@@ -1,0 +1,15 @@
+- if subcategory.has_subcategories?
+  li= link_to user_signed_in? ? search_promos_path(category: subcategory.id, search: params[:search]) : public_search_promos_path(category: subcategory.id, search: params[:search]), remote: true do
+    i class= "fa fa-#{subcategory.icon}"
+    span.title
+      = subcategory.name_I18n(params[:locale])
+    span.selected
+    span.arrow
+    ul.sub-menu
+      = render partial: 'promos/sidebar/option', collection: subcategory.subcategories, as: :option
+
+- else
+  li.js-option-category
+    = link_to user_signed_in? ? search_promos_path(category: subcategory.id, search: params[:search]) : public_search_promos_path(category: subcategory.id, search: params[:search]), remote: true do
+      span.title
+        = subcategory.name_I18n(params[:locale])

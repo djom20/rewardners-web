@@ -1,0 +1,64 @@
+.row
+  .col-sm-4.col-md-3
+    = render 'users/sidebar_options', view: "show"
+  .col-sm-8.col-md-8
+    .grid.simple
+      .grid-body.no-border
+        .row.m-t-20
+          .col-sm-4
+            .thumbnail
+              .avatar
+                span.thumbnail
+                  = image_tag @user.avatar(:medium)
+          .col-sm-4
+            h3.hl= @user.full_name_or_company
+            .label.label-primary= role_name(@user)
+          .col-sm-4.text-right
+            = link_to t('titles.edit'), edit_user_registration_path, class: "btn btn-primary"
+        hr/
+        .row
+          .col-sm-12
+            h4.hl
+              i.fa.fa-info-circle.m-r-5
+              = t('activerecord.attributes.user.general_information')
+            table.table
+              tbody
+                - if current_user.business_user?
+                  tr
+                    td.text-muted
+                      = t('activerecord.attributes.user.business_name')
+                      |:
+                    td= @user.business_name
+                  tr
+                    td.text-muted
+                      = t('activerecord.attributes.user.manager')
+                      |:
+                    td= @user.manager
+                tr
+                  td.text-muted
+                    = t('activerecord.attributes.user.city')
+                    |:
+                  td= @user.city
+                tr
+                  td.text-muted
+                    = t('activerecord.attributes.user.zipcode')
+                    |:
+                  td= @user.zipcode
+                tr
+                  td.text-muted
+                    = t('activerecord.attributes.user.address')
+                    |:
+                  td= @user.address
+            hr/
+        .row.m-b-40
+          .col-sm-12
+            h4.hl
+              i.fa.fa-map-marker.m-r-5
+              = t('activerecord.attributes.user.contact_information')
+            table.table
+              tbody
+                tr
+                  td.text-muted
+                    = t('activerecord.attributes.user.email')
+                    |:
+                  td= @user.email

@@ -1,0 +1,7 @@
+<div class="page-header">
+  <h3><%= current_user.full_name_or_company %> <small><%=t('titles.payments_make')%></small></h3>
+</div>
+<%= link_to t('titles.back'), 'javascript:history.back()', class:"btn btn-default" %>
+<br/>
+<br/>
+<%= render 'payments/form', payment: @payment %>

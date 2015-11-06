@@ -1,0 +1,7 @@
+if(<%=@subcategories.present?%>){
+  var selector = $("<%=@selector%>");
+  selector.html('<%= escape_javascript(content_tag(:option, @prompt_subcategory) + options_from_collection_for_select(@subcategories, :id, :"name_#{@locale}"))%>');
+  $("label[for='promo_subcategory1_id']").show();
+  selector.show();
+}
+

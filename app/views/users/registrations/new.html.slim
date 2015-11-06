@@ -1,0 +1,63 @@
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.no-border
+        h4
+          - signup_type = params[:signup_type].present? ? params[:signup_type] : "default_user"
+          - if signup_type.eql? "default_user"
+            = t('titles.register')
+          - else
+            = t('titles.register_business')
+      .grid-body.no-border
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name, signup_type: signup_type)) do |f|
+          .row.column-seperation
+            .col-md-6
+              h4 Basic Information
+              - if signup_type.eql? "default_user"
+                .row.form-row
+                  .col-md-6
+                    = f.input :name, required: true
+                  .col-md-6
+                    = f.input :last_name, required: true
+              - elsif signup_type.eql? "business"
+                .row.form-row
+                  .col-md-6
+                    = f.input :business_name, required: true
+                  .col-md-6
+                    = f.input :manager, required: true
+              .row.form-row
+                .col-md-12
+                  = f.input :email, required: true
+              .row.form-row
+                .col-md-6
+                  = f.input :password, required: true
+                .col-md-6
+                  = f.input :password_confirmation, required: true
+                = f.hidden_field :signup_type, value: signup_type
+            .col-md-6
+              h4 Postal Information
+              .row.form-row
+                .col-md-12
+                  = f.input :address, required: true
+              .row.form-row
+                .col-md-6
+                  = f.input :city, required: true
+                .col-md-6
+                  = f.input :zipcode, required: true
+              .row.small-text
+                p.col-md-12
+                  = t('help.zipcode')
+          .form-actions
+            .clearfix.m-b-20
+              .pull-left
+                = f.input :terms, as: :boolean
+                span.m-r-5
+                  = t('help.register')
+                = link_to t('help.terms_and_conditions'), terms_path
+              .pull-right
+                = f.button :submit, t('actions.register'), class: "btn btn-primary btn-cons"
+                = link_to t('titles.cancel'), root_path, class: "button btn btn-white btn-cons"
+            = render "users/shared/links"
+
+- content_for :javascript do
+  = javascript_include_tag "shared/users"

@@ -1,0 +1,10 @@
+#subscribe.coupon-intro_form style=("visibility:visible;")
+  = form_tag current_form_path, method: :get, id: "search_promo_form", class: "form m-adaptiv-form" do
+    .input-group.m-shadow.m-round
+      = text_field_tag :search, nil, class: "form-control m-dark m-round subscribe-input form-control", placeholder: "#{t('titles.search_options')}", value: params[:search], autocomplete: :off
+      = hidden_field_tag :locale, nil, value: params[:locale]
+      = hidden_field_tag :category, nil, value: params[:category]
+      span.input-group-btn
+        button.btn.btn-round.btn-primary
+          =t('titles.search_coupon')
+          = image_tag ("icons/arrow-circle-icon.svg"), style: "margin-left: 30px;"

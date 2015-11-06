@@ -1,0 +1,16 @@
+tr
+  td= promo.promo_name
+  td= promo.promo_code
+  td= promo.created_at_formatted
+
+  - if promo.approved?
+    td= promo.created_at_formatted
+  - elsif promo.rejected?
+    td = promo.created_at_formatted
+  - else
+    td
+      span.label.label-default N/A
+
+  td colspan="2" id="taken_promo_#{promo.id}"
+    span.label class="label-#{taken_promo_order_label(promo.order_status?)}"
+      = t("views.taken_promo.status. #{promo.order_status?}")

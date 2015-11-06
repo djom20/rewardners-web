@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import "application/vendor/bootstrap.min";
+@import "font-awesome";
+
+@import "landing/vendor/theme_base";
+@import "landing/vendor/animate";
+
+@import "landing/modules/banner";
+@import "landing/modules/video_banner";
+@import "landing/modules/language_selector";
+@import "landing/modules/navigation";
+@import "shared/modules/coupon_search";
+@import "shared/modules/icons";
+@import "shared/modules/footer";
+@import "landing/modules/content";
+

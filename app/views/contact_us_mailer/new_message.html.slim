@@ -1,0 +1,17 @@
+p = t('mailers.contact_us.new_message.title', name: @message.name.humanize)
+
+p
+  strong =t('titles.name')
+  = @message.name
+
+p
+  strong =t('titles.email')
+  = @message.email
+
+p
+  strong =t('titles.message_title')
+  = @message.message_title
+
+p
+  strong =t('titles.message_body')
+  = @message.message_body

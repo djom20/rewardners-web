@@ -1,0 +1,23 @@
+.row
+  .col-sm-4.col-md-3
+    = render 'users/sidebar_options', view: "taken_promos"
+  .col-sm-8.col-md-9
+    .grid.simple
+      .grid-body.no-border
+        .page-header
+          h2=t('titles.my_coupons')
+        - if @promos.count > 0
+          table.table.table-striped
+            thead
+              tr
+                th =t('titles.name')
+                th =t('titles.code')
+                th =t('titles.taken_at')
+                th =t('titles.approved_rejected')
+                th =t('titles.status')
+            tbody= render partial: 'users/taken_promos/taked_promo', collection: @promos, as: :promo
+          hr
+          div align="center"
+            = will_paginate @promos
+        - else
+          p.muted.margin-top-10=t('mes.no_coupons')

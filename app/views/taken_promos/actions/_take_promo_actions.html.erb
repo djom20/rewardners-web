@@ -1,0 +1,8 @@
+<%if taken_promo.approved?%>
+  <div><strong><%=t('titles.order_approved')%></strong></div>
+<%elsif taken_promo.rejected? %>
+  <div><strong><%=t('titles.order_rejected')%></strong></div>
+<%else%>
+  <%= link_to t('actions.accept'), accept_taken_promo_path(taken_promo), method: :post, remote: true, class: "btn btn-success" %>
+  <%= link_to t('actions.reject'), reject_taken_promo_path(taken_promo), method: :delete, data: { confirm: t('actions.delete') }, remote: true, class: "btn btn-danger" %>
+<%end%>

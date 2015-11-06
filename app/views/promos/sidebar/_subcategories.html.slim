@@ -1,0 +1,4 @@
+- subcategories.includes(:subcategories).each do |subcategory|
+  - if subcategory.has_subcategories?
+    ul.sub-menu.sub-category
+      = render partial: 'promos/sidebar/subcategory', collection: subcategory.subcategories

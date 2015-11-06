@@ -1,0 +1,44 @@
+<div class="page-header">
+  <h3><%=t('titles.places_discover')%></h3>
+</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <%=form_tag discover_places_path, :method => :get, :class => "navbar-form navbar-left" do%>
+    <div class="form-group">
+      <%=text_field_tag :criteria, params[:criteria], :class => "form-control", :placeholder => t('titles.criteria')%>
+    </div>
+    <button type="submit" class="btn btn-default"><%=t('actions.search')%></button>
+    <%end%>
+  </div>
+</nav>
+<div id="places_container">
+  <ul id="places_tiles">
+    <% @places.each do |place| %>
+    <li>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= render "places/pins/place", place: place %>
+        </div>
+        <div class="panel-footer">
+          <div id="like_unlike_<%=place.id%>" style="display:inline-block;">
+            <%= render "places/like_unlike/like_unlike_actions", place: place %>
+          </div>
+        </div>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<%= will_paginate @places %>
+<script type="text/javascript">
+(function ($) {
+  var options = {
+    autoResize: false,
+    container: $('#places_container'),
+    offset: 10,
+    itemWidth: 200
+  }
+  var handler = $('#places_tiles li');
+  handler.wookmark(options);
+})(jQuery);
+</script>

@@ -1,0 +1,30 @@
+p
+  strong= t('activerecord.attributes.subscription.plan')
+  = @subscription.plan_name_I18n(params[:locale])
+
+- if @subscription.paypal_payer_id.present?
+p
+  strong= t('activerecord.attributes.subscription.paypal_payer_id')
+  = @subscription.paypal_payer_id
+
+- if @subscription.paypal_profile_id.present?
+p
+  strong= t('activerecord.attributes.subscription.paypal_profile_id')
+  = @subscription.paypal_profile_id
+
+- if @subscription.paid_until.present?
+  p
+    strong= t('activerecord.attributes.subscription.paid_until')
+    = l @subscription.paid_until, format: :long
+p
+  strong= t('titles.created_date')
+  = @subscription.created_at_formatted
+p
+  strong= t('titles.status')
+  span class="label label-#{ @subscription.status? ? 'primary' : 'danger' }"
+    = @subscription.status_I18n
+
+/ - if @subscription.paid?
+/   = link_to t('titles.cancel'), subscription_path(@subscription), method: :delete, data: { confirm: 'Are you sure that you want cancel your subscription?' }, class: "btn btn-primary"
+
+= link_to t('titles.back'), subscriptions_path, class: "btn btn-info"

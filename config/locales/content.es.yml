@@ -1,0 +1,134 @@
+es:
+  navbar:
+    home: Inicio
+    features: Opciones
+    overview: Resumen
+    about: Comparte
+    download: Descargar
+    price: Precios
+    screenshots: Fotografías
+    contact: Contacto
+    business: Empresas
+    users: Registrate
+    signin: Iniciar sesión
+    english: Inglés
+    spanish: Español
+    lan: Idioma
+  banner:
+    download: Download our app in
+
+  titulo1s: CONTROL TOTAL
+  titulo1desc: Ahora tu negocio podra de enviar instantáneamente cupones digitales con todas las promociones que tu negocio necesite realizar, sin usar mensajes de texto, sin enviar correos electrónicos, sin llamadas telefónicas y sobre todo sin el uso de materiales impresos.
+  titulo2s: TU ESCOGES
+  titulo2desc: A través Rewardners tus decides a quien le envías tu promociones. Pueden ir sólo para usuarios, sólo para empresas, o pueden ir a ambos. Tu eliges a quién. En tu negocio sabrán quienes los han recibido en el momento en que se presentan, y lo muestren a través de la aplicación móvil Rewardners. 
+  titulo3s: PERSONALIZACION ILIMITADA
+  titulo3desc: Ahora con Rewardners puede atraer el tráfico de clientes a tu negocio de la manera que mas necesites. Todas tus promociones se recibiran en forma instantánea en la aplicación móvil Rewardners . Esto significa que tus promociones pueden ser válidas durante horas, días, semanas o meses . Tu eliges el período de validez y los términos de cómo funciona cada promoción.
+  titulo4s: EL PROGRAMA DE PUNTOS
+  titulo4desc: El programa de puntos de Rewardners te permite administrar tu programa de fidelizacion de clientes com tu como quieras. Tu colocas la cantidad de puntos a acumular y colocas los premios a recibir. Los usuarios podrán acumular puntos en su aplicación móvil cada vez que consumen un producto o servicio en tu negocio y constantemente recibiran un recordatorio de la cantidad de puntos que han acumulado; de esta manera, siempre van a estar pendientes al volver  tu negocio.
+  titulo5s: SIEMPRE EN CONTROL 
+  titulo5desc: Con la aplicación móvil de Rewardners, ahora puedes administrar desde cualquier dispositivo movil, la publicacion de promociones, la autorización del programa de puntos cada vez que los usuarios realizan una compra. Puedes publicar promociones desde cualquier lugar y en cualquier momento. Además, tambien puedes dar acceso a la adminitracion a otros miembros de tu personal cuando se  necesite.
+  titulo6s: AL MAS BAJO COSTO Y SIN PERDER TIEMPO 
+  titulo6desc: Con Rewardners, tu negocio siempre ahorrara dinero y tiempo, al reducir e inclusive al eliminar altos costos y comisiones de producción, el envío tradicional de publicidad, y a través de sencillos pasos tu negocio o podra publicar promociones en forma instantánea y sin tener que recurrir del tiempo de tu personal de trabajo.
+  intro_small: "Ahora podras recibir, llevar y compartir promociones y premios de tus lugares favoritos"
+  download_now: ¡Descargalo ahora GRATIS!
+
+  lear_more: Conocer más
+  why_use: ¿Porqué usar <span class="highlight">%{application_name}</span>?
+  why_use_description: --
+  feature1:
+    title: Fully <span class="highlight">Responsive</span>
+    description: --
+  feature2:
+    title: Font-Awesome <span class="highlight">300+ Icons</span>
+    description: --
+  feature3:
+    title: HTML5 &amp; CSS3 <span class="highlight">Valid</span>
+    description: --
+  overview:
+    title: ¿Porqué es especial <span class="highlight">%{application_name}</span>?
+    description: Comparte con tus amigos y familiares todos los beneficios que te ofrecen los negocios locales de tu cuidad.
+    feature1:
+      title: --
+      description: Recibe promociones y premios apoyando con tus compras a todos los negocios locales de tu cuidad.
+    feature2:
+      title: --
+      description: Siempre lleva contigo las promociones y premiios que los negocios locales de tu cuidad te ofrecen.
+    feature3:
+      title: --
+      description: Recibe promociones relevantes a tu estilo de vida en la cuidad donde vives, donde trabajas o la cuidad que visitas.
+    feature4:
+      title: --
+      description: En forma instantanea encuentra beneficios de negocios locales que no conocias y explora promociones de nuevos negocios locales.
+  about:
+    title: <span class="highlight">%{application_name}</span> ¡Comparte con todos!
+    description: A través de Rewardners puedes compartir en forma instantánea con tus familiares y amigos todas las promociones de los negocios locales de tu cuidad. Es fácil y conveniente. En el momento que tus amigos y familiares utilizan la aplicación móvil de Rewardners, todos podrán enviarse mutuamente las promociones de los negocios que más les gusten. Sin utilizar tus mensajes de texto, puedes enviar mensajes con tus promociones favoritas desde tu aplicación móvil de Rewardners a la aplicación móvil de Rewardners de tus familiares y amigos, totalmente gratis.
+    feature1:
+      title: <i class="fa fa-plus-circle"></i><h4>Tus ahorros <span class="highlight">y premios siempre en tus manos</span></h4>
+      description: Con Rewardners planificas todos los negocios que visitaras en forma familiar o profesional en tú Día. Empiezas organizándote desde donde está la mejor promoción para tomar tu taza de té o café preferida, así como en donde acumulas más puntos por tus consumos diarios. Con Rewarnders siempre obtienes ahorros y acumulas puntos por tan solo dejar tu ropa en tu lavandería preferida, así como encontrar promociones diarias para almorzar con tus amigos o clientes, al mejor precio y siempre acumulando puntos. Al finalizar el día, podrás buscar el mejor lugar para reunirte con tus amigos o para cenar con tu familia.
+    feature2:
+      title: <i class="fa fa-plus-circle"></i><h4>Tus <span class="highlight">favoritos</span></h4>
+      description: A través de la aplicación móvil de Rewarnders podrás seleccionar en tu propia lista ilimitada a todos tus negocios favoritos. De esta forma, recibirás en forma relevante notificaciones de tus negocios favoritos que tienes una nueva promoción; así como también, recordatorios del status de tus puntos acumulados con cada uno de ellos.
+    feature3:
+      title: asd
+      description:
+  download:
+    title: Baja, Usa y Goza <span class="highlight">%{application_name}</span> Completamente Gratis
+    description: <p class="dj2">Desde el momento que empiezas a usar Rewardners tendrás acceso a todas las promociones que los negocios locales de tu Cuidad te ofrecen. Con Rewardners puedes seleccionar todos tus negocios favoritos para recibir promociones relevantes a tu estilo de vida, y estar siempre notificado de todos tus puntos por consumo que has acumulados debido los negocios que más frecuentas. Podrás explorar también todos los nuevos negocios que han abierto sus puertas y que tú aún no conocías.</p> <p>No importa cuando y a donde vayas, con Rewardners siempre ahorras, siempre acumulas puntos para obtener premios y siempre sabrás lo que tu Cuidad te ofrece.</p>
+  screenshots:
+    title: <span class="highlight">%{application_name}</span> Fotografías
+    description: Rewardners es una aplicación intuitiva la cual puede ser utilizada por cualquier persona, su dinámica de funcionamiento nos muestra el camino para obtener  la recompensa de nuestros lugares favoritos.
+  contact:
+    title: Contact <span class="highlight">%{application_name}</span>
+    description: Factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum.
+    form:
+      send: Enviar mensaje
+      name:
+        placeholder: Nombre *
+        require: Por favor ingresa tu nombre
+      tel:
+        placeholder: Teléfono *
+        require: Por favor ingresa tu teléfono
+      email:
+        placeholder: Email *
+        require: Ingresar tu correo electrónico
+      message:
+        placeholder: Mensaje *
+        require: Ingresar tu mensaje
+
+  landing:
+    intro:  La nueva aplicación móvil para que siempre ahorres y ganes en tus compras
+    intro_small: Ahora podrás recibir, llevar y compartir promociones y premios de tus lugares
+    bntrs: Registrate Totalmente Gratis
+
+  business:
+    intro: Ahora tu negocio en total control de tu mercadeo diario
+    intro_small: Sin Contratos, Sin dispositvos externos, Sin pagos por adelantado, & Sin altos pagos mensuales
+    bntrs: Registrate Totalmente Gratis
+    title: <span class="highlight">%{application_name}</span> Para Empresas
+    feature1:
+      title: CONTROL TOTAL
+      description: Ahora tu negocio podra de enviar instantáneamente cupones digitales con todas las promociones que tu negocio necesite realizar, sin usar mensajes de texto, sin enviar correos electrónicos, sin llamadas telefónicas y sobre todo sin el uso de materiales impresos.
+    feature2:
+      title: TU ESCOGES
+      description: A través Rewardners tus decides a quien le envías tu promociones. Pueden ir sólo para usuarios, sólo para empresas, o pueden ir a ambos. Tu eliges a quién. En tu negocio sabrán quienes los han recibido en el momento en que se presentan, y lo muestren a través de la aplicación móvil Rewardners.
+    feature3:
+      title: EL PROGRAMA DE PUNTOS
+      description: Los usuarios podrán acumular puntos en su aplicación móvil cada vez que consumen un producto o servicio en tu negocio y constantemente recibiran un recordatorio de la cantidad de puntos que han acumulado; de esta manera, siempre van a estar pendientes al volver  tu negocio.
+    feature4:
+      title: PERSONALIZACION ILIMITADA
+      description: Ahora con Rewardners puede atraer el tráfico de clientes a tu negocio de la manera que mas necesites. Todas tus promociones se recibiran en forma instantánea en la aplicación móvil Rewardners . Esto significa que tus promociones pueden ser válidas durante horas, días, semanas o meses . Tu eliges el período de validez y los términos de cómo funciona cada promoción .
+    feature5:
+      title: AL MAS BAJO COSTO
+      description: Con Rewardners, tu negocio siempre ahorrara dinero y tiempo, al reducir e inclusive al eliminar altos costos y comisiones de producción, el envío tradicional de publicidad, y a través de sencillos pasos tu negocio o podra publicar promociones en forma instantánea y sin tener que recurrir del tiempo de tu personal de trabajo.
+    feature6:
+      title: SIEMPRE EN CONTROL
+      description: Con la aplicación móvil de Rewardners, ahora puedes administrar desde cualquier dispositivo movil, la publicacion de promociones, la autorización del programa de puntos cada vez que los usuarios realizan una compra. Puedes publicar promociones desde cualquier lugar y en cualquier momento. Además, tambien puedes dar acceso a la adminitracion a otros miembros de tu personal cuando se  necesite.
+    preciotitulo: LOS PROGRAMAS DE REWARDNERS 
+    preciotitulo1: Rewardners Select 
+    preciotitulo11: Utiliza Rewardners Select Gratis 
+    preciotitulo2: Rewardners Unlimited Por Solo $ 49.99 p/mes 
+    preciotitulo3: AGREGADOS 
+    preciotitulo4: Agrega Rewardners Rewards Program Por Solo $ 10.00 p/mes
+    preciotitulo5: Agrega Rewardners Mobile APP Mangement por solo $ 10.00 p/mes 
+    free: Gratis
+    ADDTOCART: Agregar al Carro

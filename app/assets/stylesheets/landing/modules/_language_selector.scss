@@ -1,0 +1,11 @@
+.language-selector{
+  list-style: none;
+  padding-left: 0;
+  .language-selector__item{
+    float: left;
+    margin-right: 8px;
+    img{
+      width: 32px;
+    }
+  }
+}

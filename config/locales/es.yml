@@ -1,0 +1,440 @@
+es:
+  datetime:
+    distance_in_words:
+      half_a_minute: "medio minuto"
+      less_than_x_seconds:
+        one:   "menos de 1 segundo"
+        other: "menos de %{count} seconds"
+      x_seconds:
+        one:   "1 second"
+        other: "%{count} seconds"
+      less_than_x_minutes:
+        one:   "menos de un minuto"
+        other: "menos de %{count} minutos"
+      x_minutes:
+        one:   "1 minuto"
+        other: "%{count} minutos"
+      about_x_hours:
+        one:   "aprox. 1 hora"
+        other: "aprox. %{count} horas"
+      x_days:
+        one:   "1 day"
+        other: "%{count} días"
+      about_x_months:
+        one:   "aprox. 1 mes"
+        other: "aprox. %{count} meses"
+      x_months:
+        one:   "1 mes"
+        other: "%{count} meses"
+      about_x_years:
+        one:   "aprox. 1 año"
+        other: "aprox. %{count} años"
+      over_x_years:
+        one:   "más de 1 año"
+        other: "más de %{count} años"
+      almost_x_years:
+        one:   "casi 1 año"
+        other: "casi %{count} años"
+  banner:
+    download: Descarga Nuestra App
+  titles:
+    actions: Acciones
+    home: Inicio
+    enter_zipcode: Ingresa un código postal para encontrar cupones
+    your_zipcode: Ingresa tu código postal
+    leave_blank: Deja en blanco si no quieres actualizar
+    we_need: Ingresa tu contraseña actual para actualizar tus datos
+    register: Registrate como usuario
+    register_business: Registrate como empresa
+    coupons: Cupones
+    trendings: Tendencias
+    search: Buscar
+    search_coupon: Encontrar cupones
+    coupons_taken: Cupones tomados
+    my_coupons: Mis cupones
+    my_favorites: Mis cupones favoritos
+    signup: Registrate
+    session: Iniciar sesión
+    forgot: ¿Olvidaste tu contraseña?
+    confirmations: ¿No has recibido las instrucciones de confirmación?
+    unlock: ¿No has recibido las instrucciones para desbloqueo?
+    payments: Pagos
+    payments_history: Historial de pagos
+    payments_make: Realizar un pago
+    redeem: Redimir
+    redeem_coupons: Redimir cupones
+    redeem_history: Historial de rewards
+    places: Lugares
+    stars_by_places: Estrellas por lugar
+    place: Lugar
+    user: Usuario
+    users: Usuarios
+    places_discover: Descubrir
+    places_stars: Estrellas
+    places_my: Mis Lugares
+    places_acept_reject: Aceptar o rechazar cupones
+    active_program: Programa activo
+    inactive_program: Programa inactivo
+    rewards: Rewards
+    rewards_my: Rewards
+    rewards_coupons: Mis cupones
+    options: Opciones
+    signout: Cerrar sesión
+    show: Detalles
+    edit: Editar
+    destroy: Eliminar
+    history: Historial
+    search: Búsquedas
+    criteria: Categorías de búsqueda
+    order_approved: Orden aprobada
+    order_rejected: Orden rechazada
+    name: Nombre
+    code: Código
+    taken_at: Tomado (Fecha)
+    taken_by: Tomado (Por)
+    approved_rejected: Aprobado ó Rechazado (Fecha)
+    status: Estado
+    unlike: No me gusta
+    like: Me gusta
+    transaction_id: Id. transacción
+    expiration_date: Fecha de expiración
+    amount: Valor
+    payment_method: Método de pago
+    created_date: Fecha de creación
+    approved: Aprobado
+    success: Procesado
+    active_plan: Ya hay un plan activo, hasta que el plan finalize no se podrán realizar pagos.
+    back: Regresar
+    transaction_complete: Transacción completa
+    address: Dirección
+    phone: Teléfono
+    email: Correo electrónico
+    zipcode: Código postal
+    description: Descripción
+    published: Publicado
+    published_at: Fecha de publicación
+    unpublished_at: Fecha de despublicación
+    unpublished: Despublicado
+    start_at: Empieza (Fecha)
+    end_at: Termina (Fecha)
+    extra: Información extra
+    new_coupon: Nuevo cupón
+    my_redeems: My Rewards
+    my_stars: Mis estrellas
+    my_account: Mi cuenta
+    role: Rol
+    submit: Enviar
+    update: Actualizar
+    cancel: Cancelar
+    close: Cerrar
+    notifications: Mis Mensajes
+    message_title: Asunto
+    message_body: Tu mensaje
+    back_to_coupons: Regresar a cupones
+    state_coupons: Mis cupones
+    favorite_coupons: Cupones favoritos
+    favorite_places: Tiendas favoritas
+    categories: Categorias
+    search_options: "Ingresa Código postal, Nombre ó Ciudad"
+    city: Ciudad
+    free: Gratis
+    subscriptions: Subscripciones
+    plan_active: Actual
+    plans: Planes
+    show_more: Ver más
+    my_favorites: Mis Favoritos
+    like: Me gusta
+    unlike: No me gusta
+    notifications_empty_state: Sin nuevos mensajes
+    canceled: Cancelado
+    view_all: Ver todo
+    activities: Mis mensajes
+  mes:
+    no_coupons: No hay cupones para mostrar.
+    no_redeems: No hay premios para mostrar.
+    no_stars_by_place: No hay estrellas por lugar
+  help:
+    zipcode: Código postal donde serás notificado de las promociones
+    register: Al registrarte estás aceptando nuestros
+    terms_and_conditions: Términos y condiciones
+  roles:
+    default_user: Cliente
+    business: Empresa
+    admin: Administrador
+  actions:
+    accept: Aceptar
+    reject: Rechazar
+    register: ¡Registrate!
+    session: Iniciar sesión
+    take_promo: Seleccionar
+    taken_promo: Seleccionado
+    delete: ¿Está seguro de ejecutar la acción?
+    search: Buscar
+    select: Seleccionar
+  activerecord:
+    models:
+      user: Usuario
+      place: Lugar
+      payment: Pago
+      promo: Cupón
+      redeem: Redimir
+      taken_promo: Promociones tomadas
+      role: Rol
+      redeem_taken_promo: Promociones tomadas redimidas
+      mention: Mensiones
+      Subscription: Subscripciones
+    attributes:
+      user:
+        name: Nombre
+        last_name: Apellido
+        email: Correo electrónico
+        city: Ciudad
+        business_name: 'Nombre de la empresa'
+        address: Dirección
+        manager: Gerente
+        phone: Número de Télefono
+        zipcode: Código postal
+        password: Contraseña
+        password_confirmation: Repetir contraseña
+        current_password: Contraseña actual
+        terms: Términos y condiciones
+        remember_me: Recordar contraseña
+        general_information: Información General
+        contact_information: Información de Contacto
+      place:
+        state: "Estado"
+        city: "Ciudad"
+        country: "País"
+        latitude: Latitud
+        longitude: Longitud
+        rewards_terms: "Términos de la recompensa"
+        logo: Logotipo
+        banner: Banner
+      promo:
+        name: Nombre
+        criteria: Criterios de búsqueda
+        description: Descripción
+        extra_description: Descripción extra
+        role: Rol
+        published: Publicado
+        published_status:
+          "true": "Si"
+          "false": "No"
+        start_at: Fecha inicial
+        end_at: Fecha final
+        terms: Términos y condiciones
+        banner: Banner
+        star_number: Número de estrellas
+        categories: Selecciona tus categorias
+        subcategorias: Selecciona las subcategorias
+      redeem:
+        number_of_stars: Número de estrellas
+        description: Descripción
+        approved_at: Aprobada en
+        approved_by: Aprobada por
+      subscription:
+        plan: Plan
+        paypal_payer_id: PayPal Payer ID
+        paypal_profile_id: PayPal Profile ID
+        paid_until: Pagado Hasta
+        free: Gratis
+        status:
+          "true": "Activa"
+          "false": "Inactiva"
+    validations:
+      user:
+        zipcode:
+          message: Debe ser 12345 ó 12345-1234
+        phone:
+          message: Es un número inválido.
+      contacts:
+        email: El correo electrónico es inválido.
+      promo:
+        start_at:
+          per_month: La fecha de inicio debe estar dentro del mes actual.
+        end_at:
+          per_month: La fecha final debe estar dentro del mes actual.
+      redeem:
+        number_of_stars_greater: no puede ser mayor al número de estrellas actuales.
+        number_of_stars_cero: no puede ser igual o inferior a cero.
+  views:
+    promos:
+      empty_list: No hay cupones disponibles
+      create_promo: Crear nuevo cupón para
+      state: Estado
+      create_button: Crear cupón
+      update_button: Actualizar cupón
+      role_info: El cupón será visible para los usuarios con el rol seleccionado
+      prompt_subcategory: Seleccione una subcategoria
+    places:
+      index: Lugares
+      empty_list: No hay Lugares disponibles
+      favorite_empty_list: No hay favoritos disponibles
+      new_button: Nueva tienda
+      create_button: Crear tienda
+      update_button: Actualizar tienda
+      create_place: Crear nueva tienda
+      edit_place: Editar tienda
+      views_coupons: Ver cupones
+      country_prompt: Por favor seleccione un país
+      country_prompt_validation: Por favor seleccione un país arriba
+    user:
+      edit:
+        update_button: "Actualizar"
+    taken_promo:
+      empty_list: No hay promociones tomadas por el moemento.
+      status:
+        approved: "Orden aprobada"
+        rejected: "Orden Rechazada"
+        waiting: "Esperando aprobación"
+    contacts:
+      title: Contáctenos
+    subscriptions:
+      title: Historial de subscripciones
+      empty_list: Sin subscripciones.
+      cancel: Cancelar la subscripción actual.
+      subscribe_button: Subscribirse
+      cancel_button: Cancelar subscripción
+  mailers:
+    contact_us:
+      new_message:
+        title: Mensaje enviado por %{name}
+  controllers:
+    places:
+      create: Tienda creada exitosamente.
+      update: Tienda actualizada exitosamente.
+      destroy: Tienda eliminada exitosamente.
+    promos:
+      create: Cupón creado exitosamente.
+      update: Cupón actualizado exitosamente.
+      destroy: Cupón eliminado exitosamente.
+      free_plan_restriction: No puedes crear más promociones en el plan gratis.
+    redeems:
+      create: Recompensa creada exitosamente.
+      destroy: Recompensa eliminada.
+      no_destroy: Recompensa no fue creada.
+    categories:
+      create: Categoría creada exitosamente.
+      update: Categoría actualizada exitosamente.
+      destroy: Categoría eliminada exitosamente.
+    contacts:
+      create: Su mensaje ha sido enviado exitosamente. Pronto nos comunicaremos con usted.
+    subscriptions:
+      cancel_first: Debe realizar la solicitud para cancelar la subscripción actual.
+      create: La subscripción fue creada exitosamente. Tan pronto como Paypal confirme el pago habilitaremos su subscripción.
+      destroy: La subscripción fue cancelada exitosamente.
+  footer:
+    copyright: Todos los derechos reservados
+    privacy: Política de Privacidad
+    recruitment:
+      title: RECLUTAMIENTO
+      description: Estamos con frecuencia en la búsqueda de nuevos talentos !
+    follow_us:
+      title: SIGUENOS
+      description: Estamos con frecuencia en la búsqueda de nuevos talentos !
+    links:
+      about_us: Nosotros
+      legal: Legal
+      contact_us: Contáctenos
+      faq: FAQ
+      bring_rewardners_to_your_city: Trae a tu Cuidad Rewardners
+      join_rewardners: Unete a Rewardners
+      local_projects: Proyectos Locales
+      rewardners_international: Rewardners Internacional
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Siguiente &#8594;"
+    page_gap: "&hellip;"
+  activity:
+    coupon: "promoción"
+    empty: "No hay mensajes"
+    taken_promo:
+      take: "ha seleccionado la promoción"
+      untake: "ha deseleccionado la promoción"
+      accepted: "ha aceptado la promoción"
+      rejected: "ha rechazado la promoción"
+    place:
+      like: "le gusta"
+      unlike: "no le gusta"
+    redeem:
+      create: "te ha redimido"
+      stars: "estrella(s)"
+    time:
+      today: "Hoy"
+      days: "Hace {days} día(s)"
+  terms: |
+    <p>T&eacute;rminos y Condiciones de Uso&nbsp;</p>
+
+    <p>Rewardners, LLC ( Rewardners, &quot;nosotros&quot;, &quot;en nuestro&quot;, &quot;para nosotros&quot;, &quot;con nosotros&quot;, ) proporciona en www.rewardners.com (que podr&aacute; ser mencionado como el sitio y/o portal ) y en su software para aplicaciones m&oacute;viles, &quot;servicio(s)&quot; en l&iacute;nea y en dispositivos m&oacute;viles a todos los negocios locales de una cuidad, de cualquier giro comercial, ya sean peque&ntilde;os, medianos o grandes, una nueva forma interna para que puedan realizar su propio mercadeo interno; el cual, basado en el uso de tecnolog&iacute;a amigable, les permite hacerlo en forma auto suficiente y por cuenta propia. Esto a la vez les permite obtener ahorro en costos y en tiempo, de una manera muy sencilla y con el objetivo final de llegar a los usuarios instant&aacute;neamente. Tambi&eacute;n reciben diariamente el servicio de retener a sus clientes a trav&eacute;s del uso de un programa de puntos por sus compras. Este &ldquo;servicio(s)&rdquo; est&aacute; sujeto a los siguientes &quot;T&eacute;rminos y condiciones de uso&quot; los cu&aacute;les pueden ser modificados de vez en cuando por nosotros. Nos reservamos el derecho a nuestra entera discreci&oacute;n, de poder cambiar o modificar partes de estos T&eacute;rminos y Condiciones de Uso en cualquier momento y sin previo aviso. Recomendamos que tanto los usuarios como los negocios que utilizan nuestro servicio visiten esta secci&oacute;n de nuestro portal en forma constante para revisar los T&eacute;rminos y Condiciones de Uso que est&aacute;n actualizados y por lo tanto aplicables a los t&eacute;rminos y condiciones de uso de nuestro servicio. Si por alguna raz&oacute;n, nosotros hacemos alg&uacute;n cambio en los T&eacute;rminos y Condiciones del uso de nuestro servicio, haremos visibles los cambios ocasionados en esta secci&oacute;n de T&eacute;rminos y Condiciones de Uso. Con el simple hecho de seguir utilizando nuestro(s) servicio(s) despu&eacute;s de haber hecha la publicaci&oacute;n de los cambios se constituye como la aceptaci&oacute;n de los nuevos T&eacute;rminos y Condiciones de Uso.&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <p>Si por alguna raz&oacute;n&nbsp; los negocios y/o usuarios que utilizan nuestro servicios no estuvieran de acuerdo en aceptar los T&eacute;rminos y Condiciones de Uso de nuestro servicio, sugerimos no accesar a nuestro portal as&iacute; como no utilizar nuestro software en nuestras aplicaciones m&oacute;viles&nbsp; Es enteramente responsabilidad de los usuarios y de los negocios de siempre revisar esta secci&oacute;n en nuestro sitio para verificar si ha habido alg&uacute;n cambio en estos T&eacute;rminos y Condiciones de Uso. Tambi&eacute;n sugerimos antes de utilizar cualquiera de nuestro(s) servicio(s) actuales o futuros revisar y aceptar los t&eacute;rminos y condiciones de privacidad.&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <p>Condiciones del Uso de nuestro(s) Servicio(s)&nbsp;</p>
+
+    <p>Se da por entendido y aceptado que todo &ldquo;Contenido&quot;, informaci&oacute;n,&nbsp; datos, texto, software , fotograf&iacute;as, gr&aacute;ficos , video, mensajes u otros materiales expuestos en nuestro(s) servicio(s), en forma p&uacute;blica o derivadamente en forma privada, son enteramente y exclusivamente de la(s) persona(s) que originen dicho &ldquo;Contenido&quot;. Esto significa que las personas que originan el &ldquo;Contenido&quot;, y no &ldquo;Rewardners, LLC&rdquo;, es y ser&aacute;n en forma entera y exclusiva, responsable(s) por todo el contenido que se escriba, se publique y se suba al internet o a las aplicaciones m&oacute;viles, a trav&eacute;s del uso de nuestro(s) servicio(s) para la programaci&oacute;n de todas las actividades promocionales de los negocios y de las personas a trav&eacute;s de nuestro(s) servicio(s).</p>
+
+    <p>&nbsp;</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s) se comprometen a no publicar, distribuir, licenciar, realizar, reproducir, duplicar, copiar, crear trabajos derivados de, modificar, vender , revender, explotar, transferir o transmitir por cualquier prop&oacute;sito comercial, ninguna parte de nuestro portal, software para aplicaciones m&oacute;viles as&iacute; como todos los aspectos de nuestro(s) Servicio(s). Cualquier uso del Sitio o del Servicio y su contenido que no sea espec&iacute;ficamente autorizado est&aacute; estrictamente prohibido.</p>
+
+    <p>&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <p>Nuestro(s) Servicio(s)&nbsp;</p>
+
+    <p>Para poder utilizar nuestro(s) servicio(s) todas las personas deben de registrarse con Rewardners LLC, para poder gozar todos los beneficios del Servicio(s) ofrecido(s) por Rewardners. Todas las personas que se registran, aceptan y se comprometen a proveer&nbsp; y suministrar informaci&oacute;n ver&iacute;dica, puntual, veraz, precisa, actualizada en nuestro formulario de registro. Si las persona(s) a utilizar el servicio(s) son menores de 18 a&ntilde;os de edad, podr&aacute;n utilizar el Servicio(s), con la aprobaci&oacute;n de sus padres o tutores. Rewardners, LLC se reserva el derecho de cambiar, modificar o interrumpir en forma temporal o permanente, en forma completa o parcial, con o sin previo aviso, nuestro(s) servicio(s). Todas las personas que utilizan nuestro servicio aceptan que Rewardners no ser&aacute; responsable ante las personas y negocios que utilizan nuestro(s) servicio(s), o ante cualquier tercera parte, por cualquier modificaci&oacute;n, suspensi&oacute;n o interrupci&oacute;n del Servicio.</p>
+
+    <p>&nbsp;</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s) son responsables de mantener la confidencialidad de su propia contrase&ntilde;a tanto en el portal como en su dispositivo m&oacute;vil, y son totalmente responsables de cualquiera y todas las actividades que ocurran bajo su contrase&ntilde;a, tanto en el portal, como en el uso de su dispositivo m&oacute;vil,&nbsp; seg&uacute;n sea el caso. Las personas que utilizan nuestro(s) servicio(s) se comprometen tambi&eacute;n a cambiar su contrase&ntilde;a en forma inmediata al poder comprobar si hubo alg&uacute;n uso no autorizado de su contrase&ntilde;a tanto en el portal como en su dispositivo m&oacute;vil. Se recomienda que todas las personas que utilizan nuestro(s) servicio(s) tomen sus propias medidas de privacidad y seguridad. Rewardners no es, ni ser&aacute; responsable por cualquier p&eacute;rdida o da&ntilde;o causado por lo anterior descrito en esta secci&oacute;n.&nbsp; Todas las promociones y puntos canjeables disponibles, en relaci&oacute;n a nuestro servicio(s), son originados directamente por el negocio y no por Rewardners; y son utilizables y canjeables &uacute;nicamente por los productos o servicios aplicables por el negocio que origina la promoci&oacute;n o el programa de puntos. Son los negocios los que ofrecen a los usuarios sus promociones o sus programas de puntos y no Rewardners. El negocio que origina la promoci&oacute;n o el programa de puntos es el &uacute;nico responsable para cumplir con lo ofrecido en sus promociones o en sus programas de puntos. Rewardners no tiene ninguna responsabilidad alguna con estas promociones y programas de puntos que son publicados a trav&eacute;s de nuestro(s) servicio(s).</p>
+
+    <p>&nbsp;</p>
+
+    <p>Nuestro(s) servicio(s) incluye(n) servicios que est&aacute;n disponibles a trav&eacute;s de una aplicaci&oacute;n m&oacute;vil, incluyendo los siguientes aspectos del servicio(s): el poder seleccionar contenido en nuestro servicio a trav&eacute;s de su propio dispositivo m&oacute;vil, por medio del acceso a nuestro(s) servicio(s) desde su propio dispositivo m&oacute;vil a todas las funciones de nuestro(s) servicio(s). Es probable que el proveedor de servicios inal&aacute;mbricos aplique a los usuarios los cargos normales o b&aacute;sicos por el uso del m&oacute;vil.&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <p>Derechos De Propiedad Intelectual</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s) reconocen y aceptan que nuestro(s) servicio(s) incluye(n) contenido que est&aacute; protegido por derechos de autor, patentes, marcas, secretos comerciales u otros derechos de propiedad y leyes. Tambi&eacute;n todas las personas que utilizan nuestro(s) servicio(s) aceptan no copiar, modificar, crear una obra derivada, o ingenier&iacute;a inversa para desensamblar o intentar descubrir el c&oacute;digo fuente, vender, atribuir, sublicenciar o transferir cualquier derecho en el Software. Todos los derechos no expresamente concedidos en esta secci&oacute;n son reservados por Rewardners.</p>
+
+    <p>&nbsp;</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s) aceptan a no modificar, copiar, alquilar, arrendar, prestar, vender, distribuir o crear trabajos derivados basados en nuestro(s) servicio(s) en su totalidad o en parte de nuestro contenido. La tecnolog&iacute;a y el software subyacente o relacionado con el Servicio proporcionado es propiedad de Rewardners. Todas las personas que utilizan nuestro servicio est&aacute;n comprometidas a no copiar, modificar, crear una obra derivada, ingenier&iacute;a inversa, desensamblar o intentar descubrir el c&oacute;digo fuente, vender, atribuir, sublicenciar o transferir cualquier derecho en el Software. Rewardners, su nombre y su logotipo, son marcas comerciales debidamente registradas Por lo tanto, el uso de nuestro servicio no debe ser interpretado como una concesi&oacute;n de cualquier uso, o licencia, o derecho a usar de nuestro nombre, logotipo o software.&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <p>Del Contenido&nbsp;</p>
+
+    <p>Todas las personas que utilicen nuestro(s) servicio(s) son y ser&aacute;n responsables por el contenido y otros materiales que publiquen a trav&eacute;s de nuestro(s) Servicio(s) ya sea en nuestro sitio, o al compartir con otros usuarios o destinatarios. Tambi&eacute;n ser&aacute;n responsables en No publicar contenido que no crean que no tienen derecho a utilizarlo. Todos los negocios son responsables del contenido y materiales que utilicen, y no Rewardners. Todas las preguntas, comentarios, sugerencias, ideas, u otra informaci&oacute;n sobre nuestro(s) servicio(s) proporcionados por los usuarios de nuestro(s) servicio(s) no son confidenciales y Rewardners tendr&aacute; el derecho al uso y difusi&oacute;n sin restricciones de esta informaci&oacute;n para cualquier prop&oacute;sito, comercial o de otro tipo, sin el reconocimiento o compensaci&oacute;n para las personas que lo proporcionen.</p>
+
+    <p>&nbsp;</p>
+
+    <p>Exclusi&oacute;n de Garant&iacute;as&nbsp;</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s), aceptan y reconocen que lo hacen bajo su propio riesgo y que el servicio(s) ofrecido(s) por Rewardners es de acuerdo a como se presenta y de acuerdo a su disponibilidad. Rewardners no garantiza la calidad de los productos, servicios, informaci&oacute;n u otros materiales que se hayan obtenido a trav&eacute;s del uso de nuestro(s) servicio(s); no garantiza que el servicio ser&aacute; interrumpido por alguna raz&oacute;n; no garantiza cualquier tipo de resultados que se tengan por el uso de nuestro(s) servicio(s); no garantiza que el servicio cumplir&aacute; con ciertas expectativas o necesidades; tampoco garantiza que el contenido y la informaci&oacute;n no tendr&aacute; errores; y finalmente, tampoco garantiza que la informaci&oacute;n de los negocios publicada en nuestro(s) servicio(s) ser&aacute; exacta y/o confiable.</p>
+
+    <p>&nbsp;</p>
+
+    <p>Disputas entre Usuarios y Negocios&nbsp;</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s) aceptan que Rewardners no es responsable de las interacciones entre usuarios y negocios, usuarios y usuarios, y/o negocios y negocios. Rewardners no es responsable de cualquier servicio de terceros con los que se integra el servicio, y Rewardners no tendr&aacute; ninguna responsabilidad con respecto al&nbsp; mismo. Rewardners no&nbsp; intermediar&aacute; y/o se involucrar&aacute; en modo alguno con las disputas en relaci&oacute;n con el Servicio (o cualquier servicio de terceros con los que se integra el servicio). Por lo tanto, Rewardners no tendr&aacute; ninguna obligaci&oacute;n ni responsabilidad por los actos u omisiones con respecto a las interacciones con ellos.</p>
+
+    <p>&nbsp;</p>
+
+    <p>Limitaci&oacute;n de responsabilidad</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s), aceptan y reconocen que Rewardners no se hace responsable por ning&uacute;n da&ntilde;o ya sea indirecto, incidental, especial, consecuente, ejemplar o por da&ntilde;os por p&eacute;rdida de beneficios, da&ntilde;os por p&eacute;rdida de buena voluntad, uso de datos u otras p&eacute;rdidas intangibles, por el comportamiento de las personas que utilizan el servicio, por accesos no autorizados a su cuenta e informaci&oacute;n,&nbsp; por la imposibilidad de utilizar el servicio por cualquier raz&oacute;n,&nbsp; o por no estar satisfecho con los resultados del servicio. Por lo tanto, todas las personas que utilizan nuestro servicio han sido advertidas de tal posibilidad y si por alguna raz&oacute;n, alguien no estuviera de acuerdo con lo antes descrito, lo mejor ser&aacute; la no utilizaci&oacute;n de nuestro(s) servicio(s).&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <p>Terminaci&oacute;n</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s) aceptan que Rewardners, a su sola discreci&oacute;n, podr&aacute; suspender o cancelar su cuenta (o cualquier parte del mismo) o el uso del servicio por cualquier raz&oacute;n, incluyendo, sin limitaci&oacute;n, por falta de uso o si Rewardners cree que usted ha violado o actuado en forma contraria a los T&eacute;rminos y Condiciones de Uso. Cualquier actividad fraudulenta sospechosa, abusiva o ilegal puede ser motivo para la terminaci&oacute;n de su uso del servicio, y puede ser referido a las autoridades policiales correspondientes. Rewardners tambi&eacute;n podr&aacute; a su sola discreci&oacute;n y en cualquier momento, interrumpir el Servicio, o cualquier parte del mismo, con o sin previo aviso. Todas las personas que utilizan nuestro(s) servicio(s) aceptan que cualquier terminaci&oacute;n de su acceso al Servicio bajo cualquier disposici&oacute;n de estos T&eacute;rminos y Condiciones de Uso se puede efectuar sin previo aviso, y reconoce y acepta que Rewardners pueden desactivar o eliminar su cuenta y todos sus beneficios de manera inmediata. Adem&aacute;s, usted acepta que Rewardners no ser&aacute; responsable ante ninguna persona o cualquier tercero por cualquier terminaci&oacute;n de su acceso al Servicio.</p>
+
+    <p>Todas las personas que utilizan nuestro(s) servicio(s) aceptan estos T&eacute;rminos y Condiciones de Uso y gobiernan su entero uso de este Servicio(s). Estos T&eacute;rminos y Condiciones de Uso, se regir&aacute;n por las leyes del Estado de Florida, sin consideraci&oacute;n a cualquier tipo de conflicto de disposiciones legales.&nbsp;</p>

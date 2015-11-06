@@ -1,0 +1,2 @@
+- message = "<b>#{activity.owner.full_name_or_company}</b> #{I18n.t("activity.place.unlike")} <b>#{activity.trackable.name.titleize}</b>"
+= render 'public_activity/default_message_format', activity: activity, message: message, notification_type: "info"

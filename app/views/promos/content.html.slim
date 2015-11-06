@@ -1,0 +1,12 @@
+.row
+  .col-md-3
+    = render 'promos/sidebar/search'
+  .col-md-9
+    .app-top-container.clearfix.m-t-30.m-b-30
+      - path = (controller.action_name == "public_search") ? public_search_promos_path : search_promos_path
+      = render 'shared/search_promos_form', current_form_path: path
+    #promos_container
+      = render 'promos', promos: @promos
+
+- content_for :javascript do
+  = javascript_include_tag "promos/content"

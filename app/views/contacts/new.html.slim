@@ -1,0 +1,22 @@
+.row
+  .col-md-8
+    .grid.simple
+      .grid-title.no-border
+        h4 = t('views.contacts.title')
+      .grid-body.no-border
+        = simple_form_for @contact, url: contacts_path, method: :post do |f|
+          = f.error_notification
+          .row.form-row
+            .col-md-12
+              = f.input :name, label: t('titles.name'), required: true
+            .col-md-12
+              = f.input :email, label: t('titles.email'), required: true
+            .col-md-12
+              = f.input :message_title, label: t('titles.message_title'), required: true
+            .col-md-12
+              = f.input :message_body, label: t('titles.message_body'), as: :text, required: true
+          .form-actions
+            .clearfix.m-b-20
+              .pull-right
+                = f.button :submit, t('titles.submit'), class: "btn btn-primary btn-cons"
+                = link_to t('titles.cancel'), root_path, class: "button btn btn-white btn-cons"

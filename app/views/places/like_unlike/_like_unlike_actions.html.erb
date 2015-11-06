@@ -1,0 +1,11 @@
+<% if current_user.likes?(place) %>
+  <%= link_to unlike_place_path(place), method: :delete, data: { confirm: "#{t('actions.delete')}" }, remote: true, class: "text-orange" do %>
+    <i class= "fa fa-star"></i>
+    <%= t('titles.unlike') %>
+  <% end %>
+<%else%>
+  <%= link_to like_place_path(place), method: :post, remote: true, class: "text-black" do %>
+    <i class= "fa fa-star"></i>
+    <%= t('titles.like') %>
+  <% end %>
+<%end%>

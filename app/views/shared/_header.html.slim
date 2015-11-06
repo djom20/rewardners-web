@@ -1,0 +1,67 @@
+.header.nav.navbar.navbar-default
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button"
+        span.sr-only
+        span.icon-bar
+      a.navbar-brand href="#{root_path}"
+        = render :partial => "shared/logo_svg", locals: {width: "189px", height: "40px", color: "#000000"}
+    #navbar.collapse.navbar-collapse
+
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          li= link_to t('titles.coupons'), search_promos_path
+
+          - if current_user.business_user?
+            li= link_to t('titles.places'), places_path
+            - if can?(:index, TakenPromo)
+              li= link_to t('titles.state_coupons'), taken_promos_path
+            - if can? :index, Redeem
+              li= link_to t('titles.rewards'), delivery_redeems_path
+            - if can? :index, Payment
+              li= link_to t('titles.payments'), subscriptions_path
+
+          li.dropdown.chat-toggler
+            a#my-task-list.chat-toggler.dropdown-toggle.js-notifications-show aria-expanded="false" data-toggle="dropdown" href="javascript:;" role="button" data-url=tiny_index_activities_path
+              span.badge.badge-important.m-r-5.js-load-notification-count style= "position: relative;"
+                | 0
+            ul.dropdown-menu.notifications-list role="menu"
+
+          li.chat-toggler
+            span.user-details
+              span.username
+                =(current_user.has_role? :business) ? current_user.business_name : current_user.email
+            span.profile-pic.m-l-10
+              = image_tag current_user.avatar(:thumb)
+
+          li.dropdown
+            a#user-options.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#" role="button"
+              .iconset.top-settings-dark
+
+            ul.dropdown-menu role="menu"
+              li= link_to t('titles.my_account'), user_path(current_user)
+              - unless profile_links_validation
+                li= link_to t('titles.my_coupons'), taken_promos_users_path
+                li= link_to t('titles.my_favorites'), favorite_places_users_path
+                li= link_to t('titles.my_stars'), stars_places_path
+                li= link_to t('titles.my_redeems'), processed_redeems_path
+                li.divider
+              li
+                = link_to t('titles.signout'), destroy_user_session_path, :method => :delete
+              li.divider
+              li
+                ul.language-selector role="menu"
+                  li.language-selector__item
+                    = link_to current_url(locale: :en) do
+                      = image_tag("icons/en.png")
+                  li.language-selector__item
+                    = link_to current_url(locale: :es) do
+                      = image_tag("icons/es.png")
+
+        - else
+          ul.nav.navbar-nav.navbar-right.user-session-buttons
+            - if Devise.mappings[:user].registerable? && controller_name != 'registrations'
+              li.orange= link_to t("navbar.users"), new_user_registration_path(signup_type: :default_user)
+            - if controller_name != 'sessions'
+              li.gray= link_to t("navbar.signin"), user_session_path
+

@@ -1,0 +1,57 @@
+.row
+  .col-sm-4.col-md-3
+    = render 'users/sidebar_options', view: "show"
+  .col-sm-8.col-md-8
+    .grid.simple
+      .grid-body.no-border
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f|
+          = f.error_notification
+          .row
+            .col-md-12
+              h4=t('titles.edit')
+              .label.label-primary.pull-right= role_name(@user)
+              .row.form-row
+                - if current_user.has_role? :default_user
+                  .col-md-12
+                    = f.input :name, required: true
+                  .col-md-12
+                    = f.input :last_name, required: true
+                - elsif current_user.has_role? :business
+                  .col-md-12
+                    = f.input :business_name, required: true
+                  .col-md-12
+                    = f.input :manager, required: true
+                .col-md-12
+                  = f.input :city, required: true
+                .col-md-12
+                  = f.input :zipcode, required: true
+                .col-md-12
+                  = f.input :address, required: true
+                p.col-md-12
+                  = t('help.zipcode')
+                .col-md-6
+                  .thumbnail
+                    .avatar
+                      span.thumbnail
+                        = image_tag resource.avatar(:medium)
+                .col-md-12
+                  .has-error
+                    = f.error :banner
+                  = f.file_field :avatar, label: true, class: "js-dropzone"
+                .col-md-12
+                  = f.input :email, required: true, autofocus: true
+                  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+                    p
+                      | Currently waiting confirmation for: #{resource.unconfirmed_email}
+                .col-md-12
+                  = f.input :password, autocomplete: "off", hint: t('titles.leave_blank'), required: false
+                .col-md-12
+                  = f.input :password_confirmation, required: false
+          .form-actions
+            .clearfix.m-b-20
+              .pull-right
+                = f.button :submit, t('views.user.edit.update_button'), class: "btn btn-primary btn-cons"
+                = link_to t('titles.cancel'), user_path(current_user), class: "button btn btn-white btn-cons"
+
+- content_for :javascript do
+  = javascript_include_tag "shared/users"

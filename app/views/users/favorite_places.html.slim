@@ -1,0 +1,26 @@
+.row
+  .col-sm-4.col-md-3
+    = render 'users/sidebar_options', view: "favorite_places"
+  .col-sm-8.col-md-8
+    .grid.simple
+      .grid-body.no-border
+        .page-header
+          h2 =t('titles.favorite_places')
+        #places_container
+          - if @places.length > 0
+            row#places_tiles
+              - @places.each do |place|
+                .col-md-6
+                  .grid.simple.horizontal.orange
+                    .panel.panel-default.grid-title
+                      .panel-body
+                        .row
+                          .col-md-4
+                            = image_tag place.logo(:medium), class: "img-thumbnail"
+                          .col-md-8
+                            = render "places/pins/place", place: place
+                      .panel-footer
+                        div id="like_unlike_#{place.id}" style="display:inline-block;"
+                          = render "places/like_unlike/like_unlike_actions", place: place
+          - else
+            p.muted.margin-top-10=t('views.places.favorite_empty_list')
